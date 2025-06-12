@@ -1,0 +1,62 @@
+$color1: #3478F6;
+$color2: #ffffff;
+$color3: #B2B2B2;
+
+@mixin font ($font-size, $font-weight, $color)  {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    font-family: Jost, sans-serif;
+}
+
+
+.home-container {
+  display: flex;
+  margin: 0;
+  padding: 100px;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  background: url('/src/assets/img/slider.png') center center/cover no-repeat;
+}
+
+.home-35 {
+  @include font(16px, 600, #ffffff);
+  margin: 10px auto;
+  padding: 20px;
+}
+
+
+.home-edu-text {
+  @include font(44px, 700, #ffffff);
+  p {
+    @include font(16px, 400, #B2B2B2);
+  }
+}
+
+.button {
+  background: $color1;
+  color: white;
+  padding: 10px 35px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    background: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+  }
+  
+  &:active {
+    transform: translateY(-1px);
+  }
+
+}
+

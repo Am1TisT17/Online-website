@@ -1,0 +1,21 @@
+$bgColor: #f0f0f0;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+}
+
+body{
+    background-color: $bgColor;
+}
+
+main {
+    margin: 0 auto;
+}

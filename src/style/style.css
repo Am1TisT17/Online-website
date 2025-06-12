@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #ffffff;
+  color: black;
+  padding: 44px;
+  text-align: center;
+  font-size: 36px;
+  color: #0F2239;
+}
+
+main {
+  max-width: 1920px;
+  margin: 359px 270px;
+}/*# sourceMappingURL=style.css.map */
