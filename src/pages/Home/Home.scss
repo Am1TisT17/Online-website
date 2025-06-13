@@ -1,62 +1,146 @@
+@use "sass:color";
+
 $color1: #3478F6;
 $color2: #ffffff;
 $color3: #B2B2B2;
+$max-width: 1920px;
 
 @mixin font ($font-size, $font-weight, $color)  {
     font-size: $font-size;
     font-weight: $font-weight;
     color: $color;
-    font-family: Jost, sans-serif;
+    font-family: 'Jost', sans-serif;
 }
-
 
 .home-container {
+  top: 40px;
   display: flex;
-  margin: 0;
-  padding: 100px;
-  align-items: center;
-  width: 100vw;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 120px; 
+  align-items: flex-start;
+  width: 100%;
+  max-width: $max-width;
   height: 100vh;
-  min-height: 100vh;
-  background: url('/src/assets/img/slider.png') center center/cover no-repeat;
-}
+  background: url('/src/assets/img/slider.png') center center/contain no-repeat;
+  position: relative;
+  overflow: hidden;
 
-.home-35 {
-  @include font(16px, 600, #ffffff);
-  margin: 10px auto;
-  padding: 20px;
-}
+  .home-35 {
+    @include font(18px, 600, #ffffff);
+    margin: 190px 100px 0px;
+    padding: 20px 0;
+    z-index: 2;
+  }
 
+  .hero__tag {
+  
+  display: inline-block;
+  position: relative;
+  font-size: 10px;
+  font-weight: bold;
+  
+  &::before {
+    content: "35% OFF";
+    background-color: #0D5EF4; 
+    color: white;
+    padding: 5px 8px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  &::after {
+    display: inline-block;
+  }
+  }
 
-.home-edu-text {
-  @include font(44px, 700, #ffffff);
-  p {
-    @include font(16px, 400, #B2B2B2);
+  .home-edu-text {
+    @include font(36px, 700, #ffffff);
+    max-width: 50%;
+    z-index: 2;
+    margin-top: 10px;
+
+    p {
+      @include font(14px, 400, #B2B2B2);
+      margin-top: 15px;
+    }
+  }
+
+  .circle-photo-slider {
+    position: absolute;
+    left: 300px; 
+    top: 350px;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+
+    .slider-container {
+      width: 100%;
+      
+      .photo-circle {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        margin: 0 auto;
+        box-shadow: -40px 20px 30px rgba(0, 0, 0, 0.1);
+        border: 20px solid #ffffff;
+      }
+    }
+    
+    .dots-container {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+      
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background-color: rgba(52, 120, 246, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &.active {
+          background-color: #3478F6;
+          transform: scale(1.2);
+        }
+        
+        &:hover {
+          background-color: #3478F6;
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 }
 
 .button {
   background: $color1;
-  color: white;
-  padding: 10px 35px;
-  font-size: 16px;
+  color: $color2;
+  padding: 16px 20px;
+  font-size: 12px;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: 6px;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
+  margin-top: 10px;
+  margin-left: 100px;
+  z-index: 2;
   
   &:hover {
-    background: #c0392b;
+    background: color.adjust($color1, $lightness: -10%);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 5px 15px rgba($color1, 0.3);
   }
   
   &:active {
     transform: translateY(-1px);
   }
-
 }
-
