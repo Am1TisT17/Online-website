@@ -17,8 +17,8 @@ export default function Navbar() {
           <li><a href="#teachers">TEACHERS</a></li>
           <li><a href="#about">ABOUT US</a></li>
           <li><a href="#contacts">CONTACTS</a></li>
+          <li><a href="#contacts">RU</a></li>
         </ul>
-
         <button className="navbar__button">LOGIN/REGISTER</button>
       </div>
     </nav>

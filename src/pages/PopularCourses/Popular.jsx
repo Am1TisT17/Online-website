@@ -3,8 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import alo from '../../assets/img/alo.svg';
-import line1 from '../../assets/img/line1.svg';
-import line2 from '../../assets/img/line2.svg';
 import bg from '../../assets/img/bg.svg';
 import "./Popular.scss";
 import courses from '../PopularCourses/courses.js';
@@ -44,13 +42,25 @@ export default function Popular() {
                                 </div>
                                 <h3 className="popular-card__title">{d.title}</h3>
                                 <div className="popular-card__info">
-                                    <span>Lesson {d.lessons}</span>
-                                    <span>Students {d.students}</span>
-                                    <span>{d.level}</span>
+                                    <div>
+                                        <img src={d.file} alt="file" className="popular-card__file" />
+                                        <span>Lesson {d.lessons}</span>
+                                    </div>
+                                    <div>
+                                        <img src={d.acc} alt="acc" />
+                                        <span>Students {d.students}</span>
+                                    </div>
+                                    <div>
+                                        <img src={d.lvl} alt="lvl" />
+                                        <span>{d.level}</span>
+                                    </div>
                                 </div>
                             </div>
+                            <div className="popular-card__line">
+                                <img src={d.line} alt="ava" className="popular-card__line" />
+                            </div>
                             <div className="popular-card__footer">
-                                <img src={d.ava} alt="author" className="popular-card__ava" />
+                                <img src={d.ava} alt="ava" className="popular-card__ava" />
                                 <span className="popular-card__author">{d.author}</span>
                                 <span className={`popular-card__cost${d.cost === 'FREE' ? ' free' : ''}`}>{d.cost}</span>
                             </div>

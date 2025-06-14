@@ -20,7 +20,8 @@ export default function Categories() {
             <div className="categories-container">
                 <div className="categories-header">
                     <div className="header-content">
-                        <img src={alo} alt="alo1" /><span></span>
+                        <img src={alo} alt="alo1" />
+                        <h6>COURSES CATEGORIES</h6>
                         <h3><p>Explore Top Categories</p></h3>
                     </div>
                     <div className="lines-img">

@@ -74,7 +74,7 @@ button, .my-button {
     h6 {
       @include font(16px, 500, $btn-primary);
       margin-bottom: 6px;
-      margin-left: 18px;
+      margin-left: 25px;
       margin-top: -18px
     }
 
@@ -308,10 +308,10 @@ button, .my-button {
   
   .about-content{
     h6{
-      @include font(12px, 500, $btn-primary);
+      @include font(16px, 500, $btn-primary);
       margin-bottom: 5px;
       margin-left: 20px;
-      margin-top: -20px
+      margin-top: -23px
     }
 
     h1{

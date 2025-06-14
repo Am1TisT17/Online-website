@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './pages/Navbar/Navbar.jsx'
-import Home from './pages/Home/Home.jsx'
+import Home from './pages/home/home.jsx'
 import Categories from './pages/Categories/Categories.jsx'
 import Popular from './pages/popularCourses/Popular.jsx'
 import './style/style.scss'
