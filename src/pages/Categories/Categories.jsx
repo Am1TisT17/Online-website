@@ -11,7 +11,8 @@ import icon2 from '../../assets/img/icon(2).svg';
 import icon3 from '../../assets/img/icon(3).svg';
 import icon4 from '../../assets/img/icon(4).svg';
 import cinema from '../../assets/img/cinema.jpg';
-import que from '../../assets/img/Que.png';
+import que from '../../assets/img/Que.svg';
+import alo from '../../assets/img/alo.svg'
 
 export default function Categories() {
     return(
@@ -19,7 +20,7 @@ export default function Categories() {
             <div className="categories-container">
                 <div className="categories-header">
                     <div className="header-content">
-                        <h6>Courses Categories</h6>
+                        <img src={alo} alt="alo1" /><span></span>
                         <h3><p>Explore Top Categories</p></h3>
                     </div>
                     <div className="lines-img">
@@ -84,13 +85,13 @@ export default function Categories() {
                     </div>
                     <div className="stats-counter">
                         <h2>10k +</h2>
-                        <p>Students Active Our Courses</p>
+                        <p>Students Active <p>Our Courses</p></p>
                     </div>
                 </div>
                 <div className="about-section">
                     <div className="about-content">
-                        <h6>About Our University</h6>
-                        <h1><p>Welcome to Edura University.</p></h1>
+                        <img src={alo} alt="alo1" /><h6>ABOUT OUR UNIVERCITY</h6>
+                        <h1>Welcome to Edura University.</h1>
                         <p>Collaboratively simplify user friendly networks after principle centered coordinate effective methods of empowerment distributed niche markets pursue market positioning web-readiness after resource sucking applications. </p>
                         <br></br>
                         <p>Online education, also known as e-learning, is a method of learning that takes place over the internet. It offers individuals the opportunity to acquire knowledge, skills.</p>
@@ -106,8 +107,8 @@ export default function Categories() {
                                 <li><img src= {que} alt="Question Icon" />Find the right instructor for you</li>
                             </ul>
                         </div>
-                        <button className="my-button">ABOUT MORE</button>
                     </div>
+                    <button className="about-btn">ABOUT MORE</button>
                 </div>
             </div>
         </main>

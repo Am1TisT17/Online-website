@@ -1,14 +1,15 @@
 $btn-white: #FFFFFF;
 $btn-secondary: #0F2239;
 $btn-primary: #3478F6;
+$btn-grey: #4d5765;
 
-@mixin button($background-color, $text-color, $padding-x, $padding-y, $font-size: 16px) {
+@mixin button($background-color, $text-color, $padding-x, $padding-y, $font-size,$border-radius) {
   display: inline-block;
   padding: $padding-y $padding-x;
   color: $text-color;
   background-color: $background-color;
   border: none;
-  border-radius: 8px;
+  border-radius: $border-radius;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
   font-family: 'Jost', sans-serif;
@@ -71,8 +72,10 @@ button, .my-button {
     margin-bottom: -130px;
 
     h6 {
-      @include font(16px, 600, $btn-primary);
+      @include font(16px, 500, $btn-primary);
       margin-bottom: 6px;
+      margin-left: 18px;
+      margin-top: -18px
     }
 
     h3 {
@@ -144,13 +147,13 @@ button, .my-button {
     }
 
     p {
-      @include font(10px, 400, #666);
+      
       margin: 0;
       text-align: center;
     }
 
     .card-button {
-      @include button($btn-primary, $btn-white, 30px, 8px, 16px);
+      @include button($btn-primary, $btn-white, 30px, 8px, 16px, 8px);
       margin-top: auto;
       width: 100%;
     }
@@ -164,7 +167,7 @@ button, .my-button {
     }
     
     .my-button {
-      @include button($btn-primary, $btn-white, 30px, 8px, 10px);
+      @include button($btn-primary, $btn-white, 30px, 8px, 10px, 8px);
       margin-left: -5px;
       margin-top: 10px;
     }
@@ -172,7 +175,7 @@ button, .my-button {
 }
 
 .category-button {
-  @include button($btn-primary, $btn-white, 30px, 14px, 12px);
+  @include button($btn-primary, $btn-white, 30px, 14px, 12px,8px);
   margin: 20px auto 0 auto;
   display: block;
   width: fit-content;
@@ -193,8 +196,8 @@ button, .my-button {
     left: -170px;
     z-index: 2;
     img {
-      width: 370px;
-      height: 320px;
+      width: 380px;
+      height: auto;
       border-radius: 12px;
       object-fit: cover;
       box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
@@ -202,8 +205,8 @@ button, .my-button {
   }
   .gallery-item2 {
     position: absolute;
-      bottom: 140px;
-      left: 53px;
+      bottom: 120px;
+      left: 63px;
       z-index: 3;
       img {
         width: 284px;
@@ -215,8 +218,8 @@ button, .my-button {
 
   .gallery-item3 {
     position: absolute;
-    bottom: 140px;
-    left: -230px;
+    bottom: 120px;
+    left: -240px;
     img {
       width: 280px;
       height: auto;
@@ -228,8 +231,8 @@ button, .my-button {
 
   .gallery-item7 {
     position: absolute;
-      bottom: 148px;
-      left: 46px;
+      bottom: 128px;
+      left: 55px;
       z-index: 2;
       img {
         width: 284px;
@@ -242,12 +245,12 @@ button, .my-button {
 
   .stats-counter {
     position: absolute;
-    top: 17px;
-    right: 562px;
-    width: 110px;
-    height: 150px;
+    top: 22px;
+    right: 555px;
+    width: 115px;
+    height: 145px;
     background: linear-gradient(180deg, #4F8CFF 0%, #3478F6 100%);
-    border-radius: 12px;
+    border-radius: 8px;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -257,13 +260,15 @@ button, .my-button {
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.08);
     z-index: 3;
     h2 {
-      font-size: 24px;
+      font-size: 30px;
       font-weight: 700;
       margin-bottom: 8px;
       span { color: #fff; }
     }
     p {
+      max-width: 120%;
       font-size: 12px;
+      font-weight: 400;
       text-align: center;
       margin: 0;
     }
@@ -278,8 +283,8 @@ button, .my-button {
       border-radius: 50%;
       background: transparent;
       position: absolute;
-      left: -224px;
-      top: 288px;
+      left: -226px;
+      top: 308px;
     }
     .circle-red {
       width: 50px;
@@ -289,8 +294,82 @@ button, .my-button {
       background: transparent;
       position: absolute;
       left: -150px;
-      top: 310px;
+      top: 330px;
+    }
+  }
+}
+
+.about-section{
+  position: absolute;
+  top: 1113px;
+  right: 70px;
+  width: 650px;
+  height: 480px;
+  
+  .about-content{
+    h6{
+      @include font(12px, 500, $btn-primary);
+      margin-bottom: 5px;
+      margin-left: 20px;
+      margin-top: -20px
+    }
+
+    h1{
+      @include font(36px, 700, $btn-secondary);
+      margin-bottom: 10px;
+    }
+
+    p{
+      @include font(13px, 400, $btn-grey);
+      max-width: 82%;
+      margin-bottom: -4px;
+      line-height: 1.6;
     }
   }
 
+  .about-features{
+    display: flex;
+    gap: var(--feature-gap);
+    margin-top: 9px;
+    
+    .cinema-img{
+      img{
+        width: 170px;
+        height: 86px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+      padding-top: 20px;
+    }
+
+    .features-list{
+      display: flex;
+      margin-top: 50px;
+      margin-left: 42px;
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: -30px;
+        
+        li {
+          @include font(13px, 400, $btn-secondary);
+          margin-bottom: 15px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          
+          img {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-btn{
+  @include button($btn-primary, $btn-white, 24px, 10px, 12px, 6px);
+      margin-top: 30px;
 }

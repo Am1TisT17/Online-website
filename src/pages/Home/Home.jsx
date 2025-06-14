@@ -7,7 +7,6 @@ import "./home.scss";
 import slider1 from '../../assets/img/slider1.jpg';
 import slider2 from '../../assets/img/slider2.jpg';
 import slider3 from '../../assets/img/slider3.jpg';
-import Button from "../components/Button";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
