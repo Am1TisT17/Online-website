@@ -40,10 +40,7 @@ export default function Home() {
             <p>Education can be thought of as the transmission of the values and accumulated knowledge of a society. In this sense, it is equivalent.</p>
           </div>
         </div>
-        
-        <div className="home-button">
-          <Button>GET STARTED</Button>
-        </div>
+        <button className="card-button">GET STARTED</button>
 
         <div className="circle-photo-slider">
           <div className="slider-container">
