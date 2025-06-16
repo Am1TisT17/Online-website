@@ -1,39 +1,46 @@
 import Button from "../components/Button";
 import alo from '../../assets/img/alo.svg';
+import './AreYouReady.scss'
 
-export default function AreYouReady(){
-    return(
-        <main>
-            <div className="areyouready-container">
-                <div className="areyouready-stats">
-                    <div className="stat stat-trained">
-                        <h1>3.9k+</h1>
-                        <h3>Successfully Trained</h3>
-                    </div>
-                    <div className="stat stat-classes">
-                        <h1>15.8k+</h1>
-                        <h3>Classes Completed</h3>
-                    </div>
-                    <div className="stat stat-satisfaction">
-                        <h1>97.5k+</h1>
-                        <h3>Satisfaction Rate</h3>
-                    </div>
-                    <div className="stat stat-community">
-                        <h1>100.2k+</h1>
-                        <h3>Students Community</h3>
-                    </div>
-                </div>
-                <div className="areyouready-content">
-                    <img src={alo} alt="Decoration" className="alo-icon" />
-                    <h6>Are You Ready For This Offer</h6>
-                    <h2>40% Offer First 100 Student’s For Featured</h2>
-                    <h2>Topics by Education Category</h2>
-                    <p>Get unlimited access to 6,000+ of Udemy’s top courses for your team. Learn and improve skills across
-                    business, tec, design, and more.</p>
-                    <button className="why-button">JOIN WITH US</button>
-                    <button className="why-button">BECOME A TEACHER</button>
-                </div>
-            </div>
-        </main>
-    )
-}
+const AreYouReady = () => {
+  const stats = [
+    { number: '3.9k+', label: ['Successfully', 'Trained'] },
+    { number: '15.8k+', label: ['Classes', 'Completed'] },
+    { number: '97.5k+', label: ['Satisfaction', 'Rate'] },
+    { number: '100.2k+', label: ['Students', 'Community'] },
+  ];
+
+  return (
+    <section className="are-ready-section">
+      <div className="stats-container">
+        {stats.map((stat, index) => (
+          <div key={index} className="stat-item">
+            <h2>{stat.number}</h2>
+            <p>
+              {stat.label[0]} <span>{stat.label[1]}</span>
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div className="offer-container">
+        <img src={alo} alt="alo1" className="alo-img"/>
+        <p className="offer-label">ARE YOU READY FOR THIS OFFER</p>
+        <h1 className="offer-title">
+          40% Offer First <span>100 Student's</span> For Featured
+        </h1>
+        <h2 className="offer-subtitle">Topics by Education Category</h2>
+        <p className="offer-description">
+          Get unlimited access to 6,000+ of Udemy's top courses for your team. Learn and improve skills across
+          business, tec, design, and more.
+        </p>
+        <div className="buttons-wrapper">
+          <button className="join-button">JOIN WITH US →</button>
+          <button className="teacher-button">BECOME A TEACHER →</button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AreYouReady;

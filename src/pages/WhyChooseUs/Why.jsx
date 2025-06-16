@@ -34,7 +34,7 @@ export default function WhyChooseUs() {
                     <div className="right-section__header">
                         <img src={alo} alt="Decoration" className="alo-icon" />
                         <h6 className="subtitle">WHY CHOOSE US</h6>
-                        <h1 className="title">Thousands Of Experts Around The World Ready To Help.</h1>
+                        <h2 className="title">Thousands Of Experts Around The World Ready To Help.</h2>
                         <p>Synergistically visualize alternative content before cross functional core Rapidiously administra standardized value via focused benefits. Rapidiously redefine highly efficient niche markets with plug-and-play materials professionally seize client centric solutions</p>
                     </div>
                     <div className="features-grid">

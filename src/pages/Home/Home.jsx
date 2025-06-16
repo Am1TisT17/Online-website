@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -36,11 +35,11 @@ export default function Home() {
             <span className="hero__tag">LEARN FROM TODAY</span>
           </div>
           <div className="home-edu-text">
-            <h1>Education Is Create Better Future</h1>
+            <h2>Education Is Create Better Future</h2>
             <p>Education can be thought of as the transmission of the values and accumulated knowledge of a society. In this sense, it is equivalent.</p>
           </div>
         </div>
-        <button className="card-button">GET STARTED</button>
+        <button className="card-button">GET STARTED →</button>
 
         <div className="circle-photo-slider">
           <div className="slider-container">

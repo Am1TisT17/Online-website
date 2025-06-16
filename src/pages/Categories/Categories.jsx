@@ -34,7 +34,7 @@ export default function Categories() {
                                 <h3>Web Development</h3>
                                 <p>56+ Courses</p>
                             </div>
-                            <button className="my-button">LERAN MORE</button>
+                            <button className="my-button">LERAN MORE →</button>
                         </div>
                         <div className="category-card">
                             <div className="circle-background"></div>
@@ -43,7 +43,7 @@ export default function Categories() {
                                 <h3>Digital Marketing</h3>
                                 <p>56+ Courses</p>
                             </div>
-                            <button className="my-button">LERAN MORE</button>
+                            <button className="my-button">LERAN MORE →</button>
                         </div>
                         <div className="category-card">
                             <div className="circle-background"></div>
@@ -52,7 +52,7 @@ export default function Categories() {
                                 <h3>UI/UX Design</h3>
                                 <p>56+ Courses</p>
                             </div>
-                            <button className="my-button">LERAN MORE</button>
+                            <button className="my-button">LERAN MORE →</button>
                         </div>
                         <div className="category-card">
                             <div className="circle-background"></div>
@@ -61,10 +61,10 @@ export default function Categories() {
                                 <h3>Graphic Design</h3>
                                 <p>56+ Courses</p>
                             </div>
-                            <button className="my-button">LERAN MORE</button>
+                            <button className="my-button">LERAN MORE →</button>
                         </div>
                     </div>
-                    <button className="category-button">VIEW ALL CATEGORIES</button>
+                    <button className="category-button">VIEW ALL CATEGORIES →</button>
                 </div>
                 <div className="gallery-section">
                     <div className="gallery-sec"></div>
@@ -109,7 +109,7 @@ export default function Categories() {
                             </ul>
                         </div>
                     </div>
-                    <button className="about-btn">ABOUT MORE</button>
+                    <button className="about-btn">ABOUT MORE →</button>
                 </div>
             </div>
         </main>

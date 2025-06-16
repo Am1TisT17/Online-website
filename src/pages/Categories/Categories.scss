@@ -57,14 +57,14 @@ button, .my-button {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 50px 50px 50px 233px;
+  padding: 50px 50px 50px 213px;
   background-color: $btn-white;
   display: flex;
   flex-direction: column;
 }
 
 .categories-header {
-  padding: 50px 10px;
+  padding: 50px 0px;
 
   .header-content {
     display: flex;
@@ -75,36 +75,37 @@ button, .my-button {
     h6 {
       @include font(14px, 500, $btn-primary);
       margin-bottom: 6px;
-      margin-left: 25px;
-      margin-top: -16px
+      margin-left: 20px;
+      margin-top: -17px
     }
 
     h2 {
-      @include font(34px, 700, $btn-secondary);
+      @include font(30px, 700, $btn-secondary);
+      margin: 0 10px 0 0;
     }
   }
 }
 
 .lines-img img {
-  width: 1250px;
+  width: 1100px;
   height: 120px;
   object-fit: contain;
   display: block;
   margin-top: 50px;
-  margin-left: -14px;
+  margin-left: 0px;
 }
 
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
-  margin-left: 450px;
+  margin-left: 400px;
   margin-top: -90px;
   gap: 20px;
   width: 100%;
 
   .category-card {
-    width: 170px;
-    height: 178px;
+    width: 160px;
+    height: 168px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -141,21 +142,21 @@ button, .my-button {
     }
 
     h3 {
-      @include font(15px, 600, $btn-secondary);
+      @include font(13px, 600, $btn-secondary);
       margin-top: -8px;
       margin-bottom: 5px;
       text-align: center;
     }
 
     p {
-      @include font(12px, 500, $btn-grey);
+      @include font(12px, 400, $btn-grey);
       margin-top: 3px;
       text-align: center;
     }
     .my-button {
-      @include button($btn-primary, $btn-white, 30px, 8px, 12px, 8px);
+      @include button($btn-primary, $btn-white, 25px, 6px, 10px, 6px);
       margin-left: -5px;
-      margin-top: 20px;
+      margin-top: 14px;
     }
   }
 }
@@ -172,17 +173,17 @@ button, .my-button {
 
 .gallery-section {
   position: relative;
-  width: 1070px;  // Decreased by 10px
-  height: 670px;  // Decreased by 10px
+  width: 1070px;  
+  height: 670px;  
   margin: 50px  104px 0 auto;
 
   .gallery-item1 {
     position: absolute;
     top: 0;
-    left: -220px;
+    left: -78px;
     z-index: 2;
     img {
-      width: 430px;  // Decreased by 10px
+      width: 380px; 
       height: auto;
       border-radius: 15px;
       object-fit: cover;
@@ -192,23 +193,23 @@ button, .my-button {
 
   .gallery-item2 {
     position: absolute;
-    bottom: 164px;
-    left: 48px;
+    bottom: 257px;
+    left: 155px;
     z-index: 3;
     img {
-      width: 335px;  // Decreased by 10px
+      width: 284px;  
       height: auto;
-      border-radius: 15px;
+      border-radius: 8px;
       object-fit: cover;
     }
   }
 
   .gallery-item3 {
     position: absolute;
-    bottom: 160px;
-    left: -290px;
+    bottom: 250px;
+    left: -140px;
     img {
-      width: 325px;  // Decreased by 10px
+      width: 280px;
       height: auto;
       border-radius: 15px;
       object-fit: cover;
@@ -217,25 +218,25 @@ button, .my-button {
 
   .gallery-item7 {
     position: absolute;
-    bottom: 168px;
-    left: 38px;
+    bottom: 268px;
+    left: 145px;
     z-index: 2;
     img {
-      width: 345px;  // Decreased by 10px
+      width: 284px; 
       height: auto;
-      border-radius: 15px;
+      border-radius: 8px;
       object-fit: cover;
     }
   }
 
   .stats-counter {
     position: absolute;
-    top: 20px;
-    right: 687px;
-    width: 145px;   
-    height: 195px;  
+    top: 22px;
+    right: 630px;
+    width: 115px;
+    height: 145px;
     background: linear-gradient(180deg, #4F8CFF 0%, #3478F6 100%);
-    border-radius: 10px;
+    border-radius: 8px;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -246,7 +247,7 @@ button, .my-button {
     z-index: 3;
     
     h2 {
-      font-size: 40px;  // Decreased by 10px
+      font-size: 30px; 
       font-weight: 700;
       margin-bottom: 5px;
       span { color: #fff; }
@@ -254,7 +255,7 @@ button, .my-button {
 
     p {
       max-width: 120%;
-      font-size: 15px;  // Decreased by 10px
+      font-size: 12px;  
       font-weight: 400;
       text-align: center;
       margin: 0;
@@ -265,75 +266,76 @@ button, .my-button {
     position: absolute;
     z-index: 4;
     .circle-blue {
-      width: 125px;    // Decreased by 10px
-      height: 125px;   // Decreased by 10px
-      border: 5px solid #3478F6;
+      width: 100px;    
+      height: 100px;   
+      border: 4px solid #3478F6;
       border-radius: 50%;
       background: transparent;
       position: absolute;
-      left: -280px;
-      top: 350px;
+      left: -126px;
+      top: 298px;
     }
     .circle-red {
-      width: 60px;     // Decreased by 10px
-      height: 60px;    // Decreased by 10px
-      border: 10px solid #ff1100;
+      width: 50px;     
+      height: 50px;    
+      border: 8px solid #ff1100;
       border-radius: 50%;
       background: transparent;
       position: absolute;
-      left: -190px;
-      top: 376px;
+      left: -50px;
+      top: 330px;
     }
   }
 }
 
-.about-section {
+.about-section{
   position: absolute;
-  top: 1180px; // Aligned with stats-counter
-  right: 30px; // Adjusted position
-  width: 750px; // Increased width
-  height: 580px; // Increased height
+  top: 1086px;
+  right: 95px;
+  width: 650px;
+  height: 480px;
   
-  .about-content {
-    h6 {
-      @include font(14px, 600, $btn-primary); // Increased font size
-      margin-bottom: 8px;
-      margin-left: 25px;
-      margin-top: -23px;
+  .about-content{
+    h6{
+      @include font(12px, 500, $btn-primary);
+      margin-bottom: 5px;
+      margin-left: 20px;
+      margin-top: -20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
 
-    h2 {
-      @include font(34px, 700, $btn-secondary); // Increased font size
-      margin-bottom: 15px;
+    h2{
+      @include font(35px, 700, $btn-secondary);
+      margin-bottom: 10px;
     }
 
-    p {
-      @include font(14px, 400, $btn-grey); // Increased font size
-      max-width: 75%;
+    p{
+      @include font(14px, 400, $btn-grey);
+      max-width: 85%;
       margin-bottom: -4px;
-      line-height: 1.8;
+      line-height: 1.6;
     }
   }
 
-  .about-features {
+  .about-features{
     display: flex;
     gap: var(--feature-gap);
-    margin-top: 15px;
+    margin-top: 9px;
     
-    .cinema-img {
-      img {
-        width: 200px; // Increased size
-        height: 102px; // Increased proportionally
-        border-radius: 12px;
+    .cinema-img{
+      img{
+        width: 170px;
+        height: 86px;
+        border-radius: 10px;
         object-fit: cover;
       }
-      padding-top: 25px;
+      padding-top: 20px;
     }
 
-    .features-list {
+    .features-list{
       display: flex;
-      margin-top: 60px;
-      margin-left: 50px;
+      margin-top: 50px;
+      margin-left: 42px;
       
       ul {
         list-style: none;
@@ -341,15 +343,15 @@ button, .my-button {
         margin-top: -30px;
         
         li {
-          @include font(15px, 400, $btn-secondary); // Increased font size
-          margin-bottom: 18px;
+          @include font(13px, 500, $btn-secondary);
+          margin-bottom: 15px;
           display: flex;
           align-items: center;
-          gap: 12px;
+          gap: 10px;
           
           img {
-            width: 18px; // Increased size
-            height: 18px; // Increased size
+            width: 15px;
+            height: 15px;
           }
         }
       }
@@ -357,7 +359,7 @@ button, .my-button {
   }
 }
 
-.about-btn {
-  @include button($btn-primary, $btn-white, 33px, 14px, 14px, 8px); // Increased all values
-  margin-top: 38px;
+.about-btn{
+  @include button($btn-primary, $btn-white, 24px, 10px, 12px, 6px);
+      margin-top: 17px;
 }

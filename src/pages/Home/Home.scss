@@ -62,7 +62,7 @@ button {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 0 120px; 
+  padding: 0 90px; 
   align-items: flex-start;
   width: 100%;
   max-width: $max-width;
@@ -72,11 +72,10 @@ button {
   overflow: hidden;
 
   .home-35 {
-
     .hero__tag{
       @include font(14px, 500, #ffffff);
     }
-    margin: 210px 120px 0px;
+    margin: 150px 120px 0px;
     padding: 20px 0;
     z-index: 2;
   }
@@ -103,21 +102,21 @@ button {
   }
 
   .home-edu-text {
-    @include font(28px, 700, #ffffff);
+    @include font(35px, 700, #ffffff);
     max-width: 65%;
     z-index: 2;
     margin-top: 25px;
     p {
       @include font(14px, 400, #B2B2B2);
-      max-width: 90%;
-      margin-top: 15px;
+      max-width: 95%;
+      margin-top: 10px;
     }
   }
 
   .circle-photo-slider {
     position: absolute;
-    left: 380px; 
-    top: 380px;
+    left: 340px; 
+    top: 350px;
     transform: translateY(-50%);
     width: 100%;
     z-index: 1;
@@ -126,8 +125,8 @@ button {
       width: 100%;
       
       .photo-circle {
-        width: 600px;
-        height: 600px;
+        width: 520px;
+        height: 520px;
         border-radius: 50%;
         background-size: cover;
         background-position: center;
@@ -168,7 +167,7 @@ button {
 
 
 .card-button {
-  @include button(#3478F6, #ffffff, 25px, 15px, 16px, 8px);
+  @include button(#3478F6, #ffffff, 30px, 15px, 12px, 8px);
   margin-left: 120px;
   display: block;
   width: fit-content;

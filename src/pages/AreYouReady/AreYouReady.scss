@@ -42,3 +42,125 @@ $red: #F20F10;
   line-height: 1.4;
 }
 
+.are-ready-section {
+  width: 100%;
+  min-height: 500px;
+  margin-top: 0px;
+  background: $darkblue url('/src/assets/img/ready/banner.svg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: -100px;
+  background: $blue;
+  border-radius: 24px 24px 24px 24px;
+  box-shadow: 0 8px 32px rgba(52,120,246,0.10);
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10px 60px 10px;
+  background: #0D5EF4;
+  border-right: 1px solid rgba(255,255,255,0.12);
+  &:last-child { border-right: none; }
+
+  h2 {
+    @include font(34px, 500, $white);
+    margin: -13px 0 9px 0;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  p {
+    @include font(20px, 500, $white);
+    margin: 0;
+    text-align: center;
+    span {
+      @include font(20px, 400, $white);
+      display: inline-block;
+    }
+  }
+}
+
+.offer-container {
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 850px;
+  text-align: center;
+  color: $white;
+  position: relative;
+  z-index: 2;
+
+  .alo-img{
+    margin: 0 0 0 -80px;
+  }
+
+  .offer-label {
+    @include font(15px, 500, $blue);
+    margin: -22px 0 0 33px;
+    text-transform: uppercase;
+  }
+  .offer-title {
+    @include font(40px , 700px, $white);
+    margin-bottom: 0px;
+    span {
+      color: $red;
+      font-weight: 700;
+    }
+  }
+  .offer-subtitle {
+    @include font(39px, 400, $white);
+    margin-bottom: 12px;
+  }
+  .offer-description {
+    @include font (15px, 400, $white);
+    max-width: 80%;
+    margin-left: 100px;
+    margin-bottom: 32px;
+  }
+  .buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 18px;
+    .join-button {
+      @include button($blue, $white, 30px, 15px, 12px, 8px);
+      font-weight: 600;
+    }
+    .teacher-button {
+      @include button(transparent, $white, 30px, 15px, 12px, 8px);
+      font-weight: 600;
+      border: 1px solid $white;
+      transition: background 0.2s, color 0.2s, border 0.2s;
+      box-shadow: none;
+      outline: none;
+
+      &:hover {
+        background: $white;
+        color: $blue;
+        border: 1px solid $white;
+      }
+    }
+  }
+}
+
+
+
