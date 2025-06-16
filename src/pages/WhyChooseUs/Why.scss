@@ -43,15 +43,53 @@ $grey: #4d5765;
 
 
 .why-section {
+    position: relative;
     width: 100%;
     background-color: $white;
+    background-size: cover;
     padding: 80px 0;
+
+    .ggg{
+        position: absolute;
+        right: 1105px;
+        top: 0px;
+        width: 575px;
+        height: auto;
+        z-index: 0;
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top:500px;
+        left: 1573px;
+        width: 150px;
+        height: 150px;
+        background: url('../../assets/img/why/shape.svg') no-repeat left top;
+        background-size: contain;
+        opacity: 0.7;
+        pointer-events: none;
+        z-index: 2;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 450px;
+        right: 1340px;
+        width: 310px;
+        height: 210px;
+        background: url('../../assets/img/why/Vector.svg') no-repeat right bottom;
+        background-size: contain;
+        opacity: 0.7;
+        pointer-events: none;
+        z-index: 1;
+    }
 }
 
 .why-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 30px 165px;
+    padding: 30px 105px;
     display: flex;
     gap: 60px;
 }
@@ -61,14 +99,16 @@ $grey: #4d5765;
     position: relative;
     right: 65px;
     .why-img {
-        width: 555px;
-        height: auto;
+        width: 550px;
+        height: 380px;
         border-radius: 8px;
+        z-index: 2;
+        position: relative;
     }
 
     .students-info {
         position: absolute;
-        bottom: 170px;
+        bottom: 140px;
         left: -100px;
         width: 240px;
         height: 144px;
@@ -76,6 +116,7 @@ $grey: #4d5765;
         border-radius: 8px;
         box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
         padding: 30px 5px 30px 23px;
+        z-index: 2;
 
         .students-count {
             h3 {
@@ -121,14 +162,14 @@ $grey: #4d5765;
 
     .why-button {
         @include button($blue, $white, 32px, 12px, 16px, 8px);
-        margin-left: 340px;
+        margin-left: 390px;
         margin-top: 32px;
     }
 }
 
 .right-section {
     flex: 1;
-    margin-left: -40px;  
+    margin-left: -60px;  
     margin-top: -75px;
     &__header {
 
@@ -153,8 +194,8 @@ $grey: #4d5765;
         p{
             @include font(13px, 400, $grey);
             width: 550px;
-
-            margin-top:20px;  
+            margin-top: 20px;  
+            margin-bottom: 10px;
         }
     }
 
@@ -166,34 +207,41 @@ $grey: #4d5765;
 
     .feature-card {
         position: relative;
-        padding: 10px;
+        padding: 15px;
         
         .card-bg {
             position: absolute;
-            top: 20px;
+            top: 14px;
             left: 0;
             width: 100%;
             height: auto;
             z-index: 0;
         }
 
+        .feature-title-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
         .feature-icon {
-            position: relative;
-            z-index: 1;
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
+            margin: 15px 0 20px 10px;
+            position: static;
+            z-index: 2;
+            transform: none;
         }
 
         h3 {
-            @include font(20px, 600, $darkblue);
-            margin: 0 0 8px;
-            position: relative;
-            z-index: 1;
+            @include font(18px, 600, $darkblue);
+            margin: 10px 0 10px 10px;
+            z-index: 2;
         }
 
         p {
             @include font(14px, 400, $grey);
-            margin: 0;
+            margin: -20px 10px 0 45px;
             position: relative;
             z-index: 1;
         }

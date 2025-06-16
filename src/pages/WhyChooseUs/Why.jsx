@@ -4,12 +4,16 @@ import que from '../../assets/img/Que.svg';
 import img from '../../assets/img/why/why-img.png';
 import card from '../../assets/img/why/why-card.svg';
 import alo from '../../assets/img/alo.svg';
+import ggg from '../../assets/img/why/noiceTexturebg.svg'
 import "./Why.scss";
 
 export default function WhyChooseUs() {
     return (
         <section className="why-section">
             <div className="why-container">
+                <div>
+                    <img src = {ggg} alt="a" className="ggg" />
+                </div>
                 <div className="left-section">
                     <img src={img} alt="Why Choose Us" className="why-img" />
                     <div className="students-info">
@@ -34,16 +38,18 @@ export default function WhyChooseUs() {
                         <p>Synergistically visualize alternative content before cross functional core Rapidiously administra standardized value via focused benefits. Rapidiously redefine highly efficient niche markets with plug-and-play materials professionally seize client centric solutions</p>
                     </div>
                     <div className="features-grid">
-                        {[
-                            { title: "World Class Trainers", text: "Seamlessly envisioneer tactical data through services." },
-                            { title: "Easy Learning", text: "Seamlessly envisioneer tactical data through services." },
-                            { title: "Flexible", text: "Seamlessly envisioneer tactical data through services." },
-                            { title: "Affordable Price", text: "Seamlessly envisioneer tactical data through services." }
+                        {[  
+                            { title: "World Class Trainers", text: "Seamlessly envisioneer tactical data through services.", checked: true },
+                            { title: "Easy Learning", text: "Seamlessly envisioneer tactical data through services.", checked: true },
+                            { title: "Flexible", text: "Seamlessly envisioneer tactical data through services.", checked: true },
+                            { title: "Affordable Price", text: "Seamlessly envisioneer tactical data through services.", checked: true }
                         ].map((feature, index) => (
                             <div key={index} className="feature-card">
                                 <img src={card} alt="Card background" className="card-bg" />
-                                <img src={que} alt="Feature icon" className="feature-icon" />
-                                <h3>{feature.title}</h3>
+                                <div className="feature-title-row">
+                                    {feature.checked && <img src={que} alt="Feature icon" className="feature-icon checked" />}
+                                    <h3>{feature.title}</h3>
+                                </div>
                                 <p>{feature.text}</p>
                             </div>
                         ))}

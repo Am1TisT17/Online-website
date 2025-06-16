@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import Button from "../components/Button";
 import "./Categories.scss";
 import categorypic1 from '../../assets/img/categories/CategoryPic1.png';
 import categorypic2 from '../../assets/img/categories/CategoryPic2.png';

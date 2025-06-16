@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Button({ children }) {
     function handleClick() {
         console.log("Button clicked");
