@@ -14,6 +14,7 @@ $btn-grey: #4d5765;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
   font-family: 'Jost', sans-serif;
   font-size: $font-size;
+  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
   font-weight: 400;
   text-align: center;
   outline: none;
@@ -56,7 +57,7 @@ button, .my-button {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 50px 50px 50px 200px;
+  padding: 50px 50px 50px 233px;
   background-color: $btn-white;
   display: flex;
   flex-direction: column;
@@ -69,41 +70,41 @@ button, .my-button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: -130px;
+    margin-bottom: -135px;
 
     h6 {
-      @include font(16px, 500, $btn-primary);
+      @include font(14px, 500, $btn-primary);
       margin-bottom: 6px;
       margin-left: 25px;
-      margin-top: -18px
+      margin-top: -16px
     }
 
-    h3 {
-      @include font(30px, 700, $btn-secondary);
+    h2 {
+      @include font(34px, 700, $btn-secondary);
     }
   }
 }
 
 .lines-img img {
-  width: 1100px;
+  width: 1250px;
   height: 120px;
   object-fit: contain;
   display: block;
   margin-top: 50px;
-  margin-left: 0px;
+  margin-left: -14px;
 }
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  margin-left: 400px;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  margin-left: 450px;
   margin-top: -90px;
   gap: 20px;
   width: 100%;
 
   .category-card {
-    width: 160px;
-    height: 168px;
+    width: 170px;
+    height: 178px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -140,212 +141,199 @@ button, .my-button {
     }
 
     h3 {
-      @include font(14px, 600, $btn-secondary);
+      @include font(15px, 600, $btn-secondary);
       margin-top: -8px;
       margin-bottom: 5px;
       text-align: center;
     }
 
     p {
-      
-      margin: 0;
+      @include font(12px, 500, $btn-grey);
+      margin-top: 3px;
       text-align: center;
     }
-
-    .card-button {
-      @include button($btn-primary, $btn-white, 30px, 8px, 16px, 8px);
-      margin-top: auto;
-      width: 100%;
-    }
-
-    &:hover {
-      transform: translateY(-5px);
-
-      h3 {
-        color: $btn-primary;
-      }
-    }
-    
     .my-button {
-      @include button($btn-primary, $btn-white, 30px, 8px, 10px, 8px);
+      @include button($btn-primary, $btn-white, 30px, 8px, 12px, 8px);
       margin-left: -5px;
-      margin-top: 10px;
+      margin-top: 20px;
     }
   }
 }
 
 .category-button {
-  @include button($btn-primary, $btn-white, 30px, 14px, 12px,8px);
+  @include button($btn-primary, $btn-white, 25px, 15px, 12px, 4px);
   margin: 20px auto 0 auto;
   display: block;
   width: fit-content;
   letter-spacing: 1px;
   margin-left: 0px;
-  margin-top: -50px;
+  margin-top: -70px;
 }
 
 .gallery-section {
   position: relative;
-  width: 900px;
-  height: 540px;
-  margin: 60px auto 0 auto;
+  width: 1070px;  // Decreased by 10px
+  height: 670px;  // Decreased by 10px
+  margin: 50px  104px 0 auto;
 
   .gallery-item1 {
     position: absolute;
     top: 0;
-    left: -170px;
+    left: -220px;
     z-index: 2;
     img {
-      width: 380px;
+      width: 430px;  // Decreased by 10px
       height: auto;
-      border-radius: 12px;
+      border-radius: 15px;
       object-fit: cover;
-      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+      box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
     }
   }
+
   .gallery-item2 {
     position: absolute;
-      bottom: 120px;
-      left: 63px;
-      z-index: 3;
-      img {
-        width: 284px;
-        height: auto;
-        border-radius: 12px;
-        object-fit: cover;
-      }
+    bottom: 164px;
+    left: 48px;
+    z-index: 3;
+    img {
+      width: 335px;  // Decreased by 10px
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
+    }
   }
 
   .gallery-item3 {
     position: absolute;
-    bottom: 120px;
-    left: -240px;
+    bottom: 160px;
+    left: -290px;
     img {
-      width: 280px;
+      width: 325px;  // Decreased by 10px
       height: auto;
-      border-radius: 12px;
+      border-radius: 15px;
       object-fit: cover;
     }
   }
 
-
   .gallery-item7 {
     position: absolute;
-      bottom: 128px;
-      left: 55px;
-      z-index: 2;
-      img {
-        width: 284px;
-        height: auto;
-        border-radius: 12px;
-        object-fit: cover;
-      }
+    bottom: 168px;
+    left: 38px;
+    z-index: 2;
+    img {
+      width: 345px;  // Decreased by 10px
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
+    }
   }
-
 
   .stats-counter {
     position: absolute;
-    top: 22px;
-    right: 555px;
-    width: 115px;
-    height: 145px;
+    top: 20px;
+    right: 687px;
+    width: 145px;   
+    height: 195px;  
     background: linear-gradient(180deg, #4F8CFF 0%, #3478F6 100%);
-    border-radius: 8px;
+    border-radius: 10px;
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: 'Jost', sans-serif;
-    box-shadow: 0 0 20px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.1);
     z-index: 3;
+    
     h2 {
-      font-size: 30px;
+      font-size: 40px;  // Decreased by 10px
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
       span { color: #fff; }
     }
+
     p {
       max-width: 120%;
-      font-size: 12px;
+      font-size: 15px;  // Decreased by 10px
       font-weight: 400;
       text-align: center;
       margin: 0;
     }
   }
+
   .gallery-circles {
     position: absolute;
     z-index: 4;
     .circle-blue {
-      width: 100px;
-      height: 100px;
-      border: 4px solid #3478F6;
+      width: 125px;    // Decreased by 10px
+      height: 125px;   // Decreased by 10px
+      border: 5px solid #3478F6;
       border-radius: 50%;
       background: transparent;
       position: absolute;
-      left: -226px;
-      top: 308px;
+      left: -280px;
+      top: 350px;
     }
     .circle-red {
-      width: 50px;
-      height: 50px;
-      border: 9px solid #ff1100;
+      width: 60px;     // Decreased by 10px
+      height: 60px;    // Decreased by 10px
+      border: 10px solid #ff1100;
       border-radius: 50%;
       background: transparent;
       position: absolute;
-      left: -150px;
-      top: 330px;
+      left: -190px;
+      top: 376px;
     }
   }
 }
 
-.about-section{
+.about-section {
   position: absolute;
-  top: 1113px;
-  right: 70px;
-  width: 650px;
-  height: 480px;
+  top: 1180px; // Aligned with stats-counter
+  right: 30px; // Adjusted position
+  width: 750px; // Increased width
+  height: 580px; // Increased height
   
-  .about-content{
-    h6{
-      @include font(16px, 500, $btn-primary);
-      margin-bottom: 5px;
-      margin-left: 20px;
-      margin-top: -23px
+  .about-content {
+    h6 {
+      @include font(14px, 600, $btn-primary); // Increased font size
+      margin-bottom: 8px;
+      margin-left: 25px;
+      margin-top: -23px;
     }
 
-    h1{
-      @include font(36px, 700, $btn-secondary);
-      margin-bottom: 10px;
+    h2 {
+      @include font(34px, 700, $btn-secondary); // Increased font size
+      margin-bottom: 15px;
     }
 
-    p{
-      @include font(13px, 400, $btn-grey);
-      max-width: 82%;
+    p {
+      @include font(14px, 400, $btn-grey); // Increased font size
+      max-width: 75%;
       margin-bottom: -4px;
-      line-height: 1.6;
+      line-height: 1.8;
     }
   }
 
-  .about-features{
+  .about-features {
     display: flex;
     gap: var(--feature-gap);
-    margin-top: 9px;
+    margin-top: 15px;
     
-    .cinema-img{
-      img{
-        width: 170px;
-        height: 86px;
-        border-radius: 10px;
+    .cinema-img {
+      img {
+        width: 200px; // Increased size
+        height: 102px; // Increased proportionally
+        border-radius: 12px;
         object-fit: cover;
       }
-      padding-top: 20px;
+      padding-top: 25px;
     }
 
-    .features-list{
+    .features-list {
       display: flex;
-      margin-top: 50px;
-      margin-left: 42px;
+      margin-top: 60px;
+      margin-left: 50px;
       
       ul {
         list-style: none;
@@ -353,15 +341,15 @@ button, .my-button {
         margin-top: -30px;
         
         li {
-          @include font(13px, 400, $btn-secondary);
-          margin-bottom: 15px;
+          @include font(15px, 400, $btn-secondary); // Increased font size
+          margin-bottom: 18px;
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 12px;
           
           img {
-            width: 15px;
-            height: 15px;
+            width: 18px; // Increased size
+            height: 18px; // Increased size
           }
         }
       }
@@ -369,7 +357,7 @@ button, .my-button {
   }
 }
 
-.about-btn{
-  @include button($btn-primary, $btn-white, 24px, 10px, 12px, 6px);
-      margin-top: 30px;
+.about-btn {
+  @include button($btn-primary, $btn-white, 33px, 14px, 14px, 8px); // Increased all values
+  margin-top: 38px;
 }

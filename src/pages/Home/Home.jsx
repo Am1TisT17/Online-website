@@ -4,9 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./home.scss";
 
-import slider1 from '../../assets/img/slider1.jpg';
-import slider2 from '../../assets/img/slider2.jpg';
-import slider3 from '../../assets/img/slider3.jpg';
+import slider1 from '../../assets/img/home/slider1.jpg';
+import slider2 from '../../assets/img/home/slider2.jpg';
+import slider3 from '../../assets/img/home/slider3.jpg';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -35,7 +35,7 @@ export default function Home() {
             <span className="hero__tag">LEARN FROM TODAY</span>
           </div>
           <div className="home-edu-text">
-            <h3>Education Is Create Better Future</h3>
+            <h1>Education Is Create Better Future</h1>
             <p>Education can be thought of as the transmission of the values and accumulated knowledge of a society. In this sense, it is equivalent.</p>
           </div>
         </div>

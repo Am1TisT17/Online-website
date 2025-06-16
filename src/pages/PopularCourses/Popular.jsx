@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import alo from '../../assets/img/alo.svg';
-import bg from '../../assets/img/bg.svg';
+import bg from '../../assets/img/courses/bg.svg';
 import "./Popular.scss";
 import courses from '../PopularCourses/courses.js';
 
@@ -23,7 +23,7 @@ export default function Popular() {
                 <div className="popular-header__left">
                     <img src={alo} alt="alo1" className="popular-alo" />
                     <h6 className="popular-subtitle">POPULAR COURSES</h6>
-                    <h1 className="popular-title">Our Popular Courses</h1>
+                    <h2 className="popular-title">Our Popular Courses</h2>
                 </div>
                 <button className="popular-button">VIEW ALL COURSES →</button>
             </div>

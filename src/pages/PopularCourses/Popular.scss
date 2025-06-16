@@ -15,6 +15,7 @@ $red: #F20F10;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
   font-family: 'Jost', sans-serif;
   font-size: $font-size;
+  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
   font-weight: 400;
   text-align: center;
   outline: none;
@@ -43,10 +44,10 @@ $red: #F20F10;
 
 .popular-section {
   width: 100%;
-  min-height: 80vh; // Reduced from 100vh
+  min-height: 80vh; 
   background-size: cover;
   background-position: center;
-  padding: 40px 0 60px 50px; // Reduced from 60px 0 80px 0
+  padding: 40px 0 60px 0px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,46 +59,47 @@ $red: #F20F10;
   display: flex;
   flex-direction: row;
   align-items: center;
-  
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
 .popular-header__left {
-  margin-left: 100px;
+  margin-left: 160px;
+  margin-top: 55px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
 
+}
 .popular-alo {
-  width: 32px;
-  height: 32px;
+    width: 200px;
+    height: auto;
 }
 
 .popular-subtitle {
-  @include font(15px, 600, $blue);
+  position: absolute;
+  left: 270px;
+  @include font(13px, 600, $blue);
   letter-spacing: 1px;
   margin-bottom: 2px;
 }
 
 .popular-title {
-  @include font(32px, 700, $darkblue);
+  @include font(34px, 700, $darkblue);
   margin-bottom: 0;
 }
 
 .popular-button {
-  position: absolute;
-  margin-top: 50px;
-  right: 175px;
+  margin-right: 157px;
+  margin-top: 40px;
   @include button($blue, $white, 20px, 16px, 13px, 8px);
 }
 
 .popular-slider-wrapper {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1220px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 10px 0;
   overflow: visible; 
 }
 
@@ -140,22 +142,22 @@ $red: #F20F10;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 380px; // Increased height for longer card
+  min-height: 430px; 
   transition: box-shadow 0.2s, transform 0.2s;
   position: relative;
-  will-change: transform; // Optimize animation performance
+  will-change: transform; 
   
   &:hover {
     box-shadow: 0 8px 32px 0 rgba(52,120,246,0.15);
     transform: translateY(-6px);
-    z-index: 1; // Ensure card appears above others when hovering
+    z-index: 1; 
   }
 }
 
 .popular-card__img-wrap {
   position: relative;
   width: 100%;
-  height: 200px; // Increased height for photo
+  height: 240px; 
   background: $white;
   display: flex;
   align-items: center;
@@ -171,12 +173,12 @@ $red: #F20F10;
 
 .popular-card__duration {
   position: absolute;
-  top: 22px;
+  top: 23px;
   left: 12px;
   background: $red;
-  @include font(8px, 600, $white);
+  @include font(9px, 600, $white);
   border-radius: 20px;
-  padding: 4px 20px;
+  padding: 5px 22px;
   letter-spacing: 1px;
 }
 
@@ -191,7 +193,7 @@ $red: #F20F10;
 
 .popular-card__rating {
 
-  @include font(15px, 500, $blue);
+  @include font(15px, 600, $blue);
   margin-bottom: 2px;
   display: flex;
   align-items: center;
@@ -213,7 +215,7 @@ $red: #F20F10;
   @include font(9px, 400, $grey);
   display: flex;
   align-items: center;
-  justify-content: space-between; // Изменено с flex-start на space-between
+  justify-content: space-between;
   width: 100%;
   margin-left: -5px;
   margin-bottom: 8px;
@@ -228,6 +230,8 @@ $red: #F20F10;
     width: 20px;
     height: 20px;
   }
+
+
   
   img {
     width: 10px;
@@ -246,7 +250,7 @@ $red: #F20F10;
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 14px;
+  padding: 10px 15px;
   border-top: 1px solid $white;
   background: $white;
   width: 100%; 

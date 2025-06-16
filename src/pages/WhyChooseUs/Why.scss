@@ -1,0 +1,201 @@
+$white: #FFFFFF;
+$darkblue: #0F2239;
+$blue: #3478F6;
+$grey: #4d5765;
+
+@mixin button($background-color, $text-color, $padding-x, $padding-y, $font-size,$border-radius) {
+  display: inline-block;
+  padding: $padding-y $padding-x;
+  color: $text-color;
+  background-color: $background-color;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+  font-family: 'Jost', sans-serif;
+  font-size: $font-size;
+  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+  text-align: center;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: darken($background-color, 10%);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin font($font-size, $font-weight, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  font-family: 'Jost', sans-serif;
+  line-height: 1.4;
+}
+
+
+.why-section {
+    width: 100%;
+    background-color: $white;
+    padding: 80px 0;
+}
+
+.why-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 165px;
+    display: flex;
+    gap: 60px;
+}
+
+.left-section {
+    flex: 1;
+    position: relative;
+    right: 65px;
+    .why-img {
+        width: 555px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .students-info {
+        position: absolute;
+        bottom: 170px;
+        left: -100px;
+        width: 240px;
+        height: 144px;
+        background: $white;
+        border-radius: 8px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        padding: 30px 5px 30px 23px;
+
+        .students-count {
+            h3 {
+                @include font(20px, 700, $blue);
+                margin: 0;
+            }
+
+            h2 {
+                @include font(20px, 600, $darkblue);
+                margin-top: -28px;
+                margin-left: 55px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .students-avatars {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 47px;
+                height: 47px;
+                border-radius: 50%;
+                border: 3px solid $white;
+                margin-left: -12px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            .avatar-count {
+                @include font(15px, 400, $white);
+                margin-left: -15px;
+                background-color: $blue;
+                padding: 12px 6px;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .why-button {
+        @include button($blue, $white, 32px, 12px, 16px, 8px);
+        margin-left: 340px;
+        margin-top: 32px;
+    }
+}
+
+.right-section {
+    flex: 1;
+    margin-left: -40px;  
+    margin-top: -75px;
+    &__header {
+
+        .alo-icon {
+            width: 170px;
+            height: 170px;
+            margin-bottom: -80px;
+        }
+
+        .subtitle {
+            @include font(13px, 600, $blue);
+            letter-spacing: 1.5px;
+            margin: -18px 22px 15px;
+        }
+
+        .title {
+            @include font(36px, 700, $darkblue);
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        p{
+            @include font(13px, 400, $grey);
+            width: 550px;
+
+            margin-top:20px;  
+        }
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .feature-card {
+        position: relative;
+        padding: 10px;
+        
+        .card-bg {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 0;
+        }
+
+        .feature-icon {
+            position: relative;
+            z-index: 1;
+            width: 20px;
+            height: 20px;
+        }
+
+        h3 {
+            @include font(20px, 600, $darkblue);
+            margin: 0 0 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        p {
+            @include font(14px, 400, $grey);
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}

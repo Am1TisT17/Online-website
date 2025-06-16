@@ -2,7 +2,8 @@ import React from 'react'
 import Navbar from './pages/Navbar/Navbar.jsx'
 import Home from './pages/home/home.jsx'
 import Categories from './pages/Categories/Categories.jsx'
-import Popular from './pages/popularCourses/Popular.jsx'
+import Popular from './pages/PopularCourses/Popular.jsx'
+import Why from './pages/WhyChooseUs/Why.jsx'
 import './style/style.scss'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Home />
         <Categories />
         <Popular />
+        <Why />
       </main>
     </div>
   )

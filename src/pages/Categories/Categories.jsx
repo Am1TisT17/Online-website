@@ -1,18 +1,18 @@
 import React, { useState, useRef } from "react";
 import Button from "../components/Button";
 import "./Categories.scss";
-import categorypic1 from '../../assets/img/CategoryPic1.png';
-import categorypic2 from '../../assets/img/CategoryPic2.png';
-import categorypic3 from '../../assets/img/CategoryPic3.png';
-import categorypic7 from '../../assets/img/CategoryPic7.png';
-import lines from '../../assets/img/lineS.png';
-import icon1 from '../../assets/img/icon(1).svg';
-import icon2 from '../../assets/img/icon(2).svg';
-import icon3 from '../../assets/img/icon(3).svg';
-import icon4 from '../../assets/img/icon(4).svg';
-import cinema from '../../assets/img/cinema.jpg';
+import categorypic1 from '../../assets/img/categories/CategoryPic1.png';
+import categorypic2 from '../../assets/img/categories/CategoryPic2.png';
+import categorypic3 from '../../assets/img/categories/CategoryPic3.png';
+import categorypic7 from '../../assets/img/categories/CategoryPic7.png';
+import icon1 from '../../assets/img/categories/icon(1).svg';
+import icon2 from '../../assets/img/categories/icon(2).svg';
+import icon3 from '../../assets/img/categories/icon(3).svg';
+import icon4 from '../../assets/img/categories/icon(4).svg';
+import cinema from '../../assets/img/categories/cinema.jpg';
 import que from '../../assets/img/Que.svg';
 import alo from '../../assets/img/alo.svg'
+import lines from "../../assets/img/categories/Lines.png";
 
 export default function Categories() {
     return(
@@ -20,9 +20,9 @@ export default function Categories() {
             <div className="categories-container">
                 <div className="categories-header">
                     <div className="header-content">
-                        <img src={alo} alt="alo1" />
+                        <img src={alo} alt="alo1" className="alo-img"/>
                         <h6>COURSES CATEGORIES</h6>
-                        <h3><p>Explore Top Categories</p></h3>
+                        <h2>Explore Top Categories</h2>
                     </div>
                     <div className="lines-img">
                         <img src= {lines} alt="lines" />
@@ -68,6 +68,7 @@ export default function Categories() {
                     <button className="category-button">VIEW ALL CATEGORIES</button>
                 </div>
                 <div className="gallery-section">
+                    <div className="gallery-sec"></div>
                     <div className="gallery-item1">
                         <img src = {categorypic1} alt="pic1" />
                     </div>
@@ -86,13 +87,13 @@ export default function Categories() {
                     </div>
                     <div className="stats-counter">
                         <h2>10k +</h2>
-                        <p>Students Active <p>Our Courses</p></p>
+                        <p>STUDENTS ACTIVE <p>OUR COURSES</p></p>
                     </div>
                 </div>
                 <div className="about-section">
                     <div className="about-content">
                         <img src={alo} alt="alo1" /><h6>ABOUT OUR UNIVERCITY</h6>
-                        <h1>Welcome to Edura University.</h1>
+                        <h2>Welcome to Edura University.</h2>
                         <p>Collaboratively simplify user friendly networks after principle centered coordinate effective methods of empowerment distributed niche markets pursue market positioning web-readiness after resource sucking applications. </p>
                         <br></br>
                         <p>Online education, also known as e-learning, is a method of learning that takes place over the internet. It offers individuals the opportunity to acquire knowledge, skills.</p>

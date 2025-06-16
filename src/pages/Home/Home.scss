@@ -5,18 +5,19 @@ $color2: #ffffff;
 $color3: #B2B2B2;
 $max-width: 1920px;
 
-@mixin button($background-color, $text-color, $padding-x, $padding-y, $font-size: 16px) {
+@mixin button($background-color, $text-color, $padding-x, $padding-y, $font-size,$border-radius) {
   display: inline-block;
   padding: $padding-y $padding-x;
   color: $text-color;
   background-color: $background-color;
   border: none;
-  border-radius: 8px;
+  border-radius: $border-radius;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
   font-family: 'Jost', sans-serif;
   font-size: $font-size;
-  font-weight: 500;
+  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 400;
   text-align: center;
   outline: none;
   box-shadow: none;
@@ -33,7 +34,6 @@ $max-width: 1920px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 }
-
 
 
 @mixin font ($font-size, $font-weight, $color)  {
@@ -67,13 +67,16 @@ button {
   width: 100%;
   max-width: $max-width;
   height: 100vh;
-  background: url('/src/assets/img/slider.png') center center/contain no-repeat;
+  background: url('/src/assets/img/home/slider.png') center center/contain no-repeat;
   position: relative;
   overflow: hidden;
 
   .home-35 {
-    @include font(18px, 600, #ffffff);
-    margin: 180px 90px 0px;
+
+    .hero__tag{
+      @include font(14px, 500, #ffffff);
+    }
+    margin: 210px 120px 0px;
     padding: 20px 0;
     z-index: 2;
   }
@@ -82,16 +85,14 @@ button {
   
   display: inline-block;
   position: relative;
-  font-size: 13px;
   font-weight: bold;
   
   &::before {
     content: "35% OFF";
     background-color: #0D5EF4; 
     color: white;
-    padding: 6px 10px;
+    padding: 6px 17px;
     border-radius: 20px;
-    
     display: inline-block;
     margin-right: 10px;
   }
@@ -102,20 +103,21 @@ button {
   }
 
   .home-edu-text {
-    @include font(40px, 700, #ffffff);
+    @include font(28px, 700, #ffffff);
     max-width: 65%;
     z-index: 2;
-    margin-top: 12px;
+    margin-top: 25px;
     p {
       @include font(14px, 400, #B2B2B2);
+      max-width: 90%;
       margin-top: 15px;
     }
   }
 
   .circle-photo-slider {
     position: absolute;
-    left: 350px; 
-    top: 350px;
+    left: 380px; 
+    top: 380px;
     transform: translateY(-50%);
     width: 100%;
     z-index: 1;
@@ -124,8 +126,8 @@ button {
       width: 100%;
       
       .photo-circle {
-        width: 500px;
-        height: 500px;
+        width: 600px;
+        height: 600px;
         border-radius: 50%;
         background-size: cover;
         background-position: center;
@@ -166,8 +168,8 @@ button {
 
 
 .card-button {
-  @include button(#3478F6, #ffffff, 22px, 10px, 16px);
-  margin-left: 88px;
+  @include button(#3478F6, #ffffff, 25px, 15px, 16px, 8px);
+  margin-left: 120px;
   display: block;
   width: fit-content;
 }
