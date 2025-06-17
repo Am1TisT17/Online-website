@@ -1,0 +1,287 @@
+$btn-white: #FFFFFF;
+$btn-secondary: #0F2239;
+$btn-primary: #0D5EF4;
+$btn-grey: #4d5765;
+
+@mixin button($background-color, $text-color, $padding-x, $padding-y, $font-size,$border-radius) {
+  display: inline-block;
+  padding: $padding-y $padding-x;
+  color: $text-color;
+  background-color: $background-color;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+  font-family: 'Jost', sans-serif;
+  font-size: $font-size;
+  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+  text-align: center;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: darken($background-color, 10%);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin font($font-size, $font-weight, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  font-family: 'Jost', sans-serif;
+  line-height: 1.4;
+}
+
+.promo-banners-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    .promo-banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        width: 50%;
+        min-height: 200px;
+        color: $btn-white;
+
+        &.blue-banner {
+            background-color: $btn-primary;
+        }
+
+        &.red-banner {
+            background-color: $red; 
+        }
+
+        .promo-banner-content {
+            z-index: 1;
+            text-align: left;
+
+            .promo-icon {
+                width: 30px;
+                height: auto;
+                margin-bottom: 10px;
+                filter: brightness(0) invert(1); 
+            }
+
+            h6 {
+                @include font(14px, 500, $btn-white);
+                margin-bottom: 5px;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                @include font(28px, 700, $btn-white);
+                line-height: 1.2;
+                margin-bottom: 20px;
+                max-width: 250px;
+            }
+
+            .join-us-button {
+                @include button($btn-white, $btn-primary, 25px, 12px, 14px, 5px);
+            }
+        }
+
+        .banner-image {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 150%; 
+            width: auto;
+            opacity: 0.4;
+            transform: translateX(20%); 
+            z-index: 0;
+        }
+    }
+}
+
+.testimonials-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 250px; 
+    padding-bottom: 100px; 
+    background-color: #f8faff; 
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+
+    .background-wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+        opacity: 0.7;
+    }
+
+    .header-content {
+        text-align: center;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 1;
+
+        .alo-img {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: auto;
+        }
+
+        h6 {
+            @include font(14px, 500, $btn-primary);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            padding-top: 40px; 
+        }
+
+        h2 {
+            @include font(38px, 700, $btn-secondary);
+            max-width: 600px;
+            line-height: 1.2;
+        }
+    }
+
+    .slider-container-testimonials {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 20px;
+        z-index: 1;
+
+        .slick-track {
+            display: flex !important;
+            align-items: stretch; 
+        }
+
+        .slick-slide {
+            height: auto; 
+            & > div {
+                height: 100%; 
+            }
+        }
+
+        .testimonial-card {
+            background-color: $btn-white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            margin: 10px; 
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 300px; 
+            justify-content: space-between;
+
+            .avatar-container {
+                position: relative;
+                width: 100px;
+                height: 100px;
+                margin-bottom: 20px;
+
+                .avatar-bg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    z-index: 0;
+                }
+
+                .student-avatar {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    z-index: 1;
+                }
+            }
+
+            .testimonial-text {
+                @include font(16px, 400, $btn-grey);
+                margin-bottom: 20px;
+            }
+
+            .student-name {
+                @include font(20px, 600, $btn-secondary);
+                margin-bottom: 5px;
+            }
+
+            .student-role {
+                @include font(14px, 400, $btn-primary);
+                margin-bottom: 15px;
+            }
+
+            .rating {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                .star {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                .rating-number {
+                    @include font(14px, 400, $btn-grey);
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    .dots-container-testimonials {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+
+            &.active {
+                background-color: $btn-primary;
+                transform: scale(1.2);
+            }
+
+            &:hover {
+                background-color: $btn-primary;
+            }
+        }
+    }
+}

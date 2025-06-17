@@ -1,0 +1,71 @@
+$white: #FFFFFF;
+$darkblue: #0F2239;
+$blue: #0D5EF4;
+$grey: #B2B2B2;
+
+@mixin font($font-size, $font-weight, $color) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    font-family: 'Jost', sans-serif;
+    line-height: 1.4;
+  }
+
+.trusted-partners-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 178px;
+    background-color: $white;
+    min-height: 50vh;
+
+    .text-content {
+        flex: 1;
+        max-width: 600px;
+        text-align: left;
+        padding: 20px;
+        position: relative;
+
+        .alo-img {
+            position: absolute;
+            top: 22px;
+            left: 21px;
+            width: 150px;
+            height: auto;
+        }
+
+        h6 {
+            @include font(15px, 500, $blue);
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            @include font(36px, 700, $darkblue);
+            line-height: 1.2;
+
+            span {
+                color: $blue;
+            }
+        }
+    }
+
+    .brand-images {
+        flex: 1;
+        max-width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 60px;
+        .brand-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}
+
+
+

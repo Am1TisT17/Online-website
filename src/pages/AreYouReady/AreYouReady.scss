@@ -1,6 +1,6 @@
 $white: #FFFFFF;
 $darkblue: #0F2239;
-$blue: #3478F6;
+$blue: #0D5EF4;
 $grey: #4d5765;
 $red: #F20F10;
 
@@ -44,7 +44,7 @@ $red: #F20F10;
 
 .are-ready-section {
   width: 100%;
-  min-height: 500px;
+  min-height: 600px;
   margin-top: 0px;
   background: $darkblue url('/src/assets/img/ready/banner.svg') no-repeat center center;
   background-size: cover;
@@ -54,6 +54,7 @@ $red: #F20F10;
   justify-content: flex-start;
   padding-bottom: 60px;
   position: relative;
+  border-top: 130px solid $white;
 }
 
 .stats-container {
@@ -104,9 +105,11 @@ $red: #F20F10;
   margin: 0 auto;
   margin-top: 100px;
   max-width: 850px;
+  max-height: auto;
   text-align: center;
   color: $white;
-  position: relative;
+  position: absolute;
+  top: 50px;
   z-index: 2;
 
   .alo-img{
@@ -114,12 +117,12 @@ $red: #F20F10;
   }
 
   .offer-label {
-    @include font(15px, 500, $blue);
-    margin: -22px 0 0 33px;
+    @include font(13px, 500, $blue);
+    margin: -19px 0 10px -5px;
     text-transform: uppercase;
   }
   .offer-title {
-    @include font(40px , 700px, $white);
+    @include font(35px , 700px, $white);
     margin-bottom: 0px;
     span {
       color: $red;
@@ -127,26 +130,26 @@ $red: #F20F10;
     }
   }
   .offer-subtitle {
-    @include font(39px, 400, $white);
+    @include font(35px, 400, $white);
     margin-bottom: 12px;
   }
   .offer-description {
-    @include font (15px, 400, $white);
-    max-width: 80%;
-    margin-left: 100px;
+    @include font (13px, 400, #D0DBE9);
+    max-width: 70%;
+    margin-left: 110px;
     margin-bottom: 32px;
   }
   .buttons-wrapper {
     display: flex;
     justify-content: center;
     gap: 18px;
-    margin-top: 18px;
+    margin-top: 5px;
     .join-button {
-      @include button($blue, $white, 30px, 15px, 12px, 8px);
+      @include button($blue, $white, 30px, 15px, 12px, 6px);
       font-weight: 600;
     }
     .teacher-button {
-      @include button(transparent, $white, 30px, 15px, 12px, 8px);
+      @include button(transparent, $white, 30px, 15px, 12px, 6px);
       font-weight: 600;
       border: 1px solid $white;
       transition: background 0.2s, color 0.2s, border 0.2s;
@@ -161,6 +164,3 @@ $red: #F20F10;
     }
   }
 }
-
-
-

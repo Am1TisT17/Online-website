@@ -25,7 +25,7 @@ const AreYouReady = () => {
 
       <div className="offer-container">
         <img src={alo} alt="alo1" className="alo-img"/>
-        <p className="offer-label">ARE YOU READY FOR THIS OFFER</p>
+        <h6 className="offer-label">ARE YOU READY FOR THIS OFFER</h6>
         <h1 className="offer-title">
           40% Offer First <span>100 Student's</span> For Featured
         </h1>

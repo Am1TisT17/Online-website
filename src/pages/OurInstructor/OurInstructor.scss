@@ -1,0 +1,284 @@
+$btn-white: #FFFFFF;
+$btn-secondary: #0F2239;
+$btn-primary: #3478F6;
+$btn-grey: #4d5765;
+
+@mixin button($background-color, $text-color, $padding-x, $padding-y, $font-size,$border-radius) {
+  display: inline-block;
+  padding: $padding-y $padding-x;
+  color: $text-color;
+  background-color: $background-color;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+  font-family: 'Jost', sans-serif;
+  font-size: $font-size;
+  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+  text-align: center;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: darken($background-color, 10%);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin font($font-size, $font-weight, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  font-family: 'Jost', sans-serif;
+  line-height: 1.4;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.instructor-section {
+    display: flex;
+    align-items: flex-start;
+    padding: 190px 178px 0;
+    position: relative;
+    overflow: hidden;
+    background-color: $btn-white; 
+    min-height: 100vh;
+    gap: 30px;
+    flex-wrap: nowrap; 
+
+    .vector-1, .vector-2, .vector-3, .vector-4, .vector-5, .vector-6 {
+        position: absolute;
+    }
+
+    .vector-1 { top: 10%; left: 35%; transform: scale(0.8); }
+    .vector-2 { top: 83%; right: 90%; transform: scale(0.8); }
+    .vector-3 { bottom: 20%; left: 43%; transform: scale(0.8); }
+    .vector-5 { bottom: 55%; right: 0%; transform: scale(0.8); z-index: 1; }
+    .vector-4 { top: 0%; left: 87%; transform: scale(0.8); z-index: 2;}
+    .vector-6 { bottom: 65%; right: 88%; transform: scale(0.7); }
+
+
+    .header-section {
+        flex: 1;
+        max-width: 550px;
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+        position: relative;
+        z-index: 1;
+        
+        .alo-img {
+            position: absolute;
+            top: 23px;
+            left: 20px; 
+            width: 150px; 
+            height: auto;
+        }
+
+        h6 {
+            @include font(15px, 500, $btn-primary);
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            @include font(35px, 700, $btn-secondary);
+            margin-bottom: 20px;
+        }
+
+        p {
+            @include font(14px, 400, $btn-grey);
+            margin-bottom: 5px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+
+            .explore-btn {
+                @include button($btn-primary, $btn-white, 24px, 15px, 12px, 5px);
+            }
+
+            .contact-btn {
+                @include button(#FF4D4D, $btn-white, 24px, 15px, 12px, 5px); 
+            }
+        }
+    }
+
+    .instructor-grid {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        max-width: 600px;
+        padding: 0;
+        margin-right: 50px;
+        margin-top: 20px;
+        z-index: 1;
+        animation: fade-in 0.8s ease-out forwards;
+
+        .instructor-card {
+            background-color: $btn-white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; 
+            height: 200px; 
+
+            &.raised {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+                .card-overlay {
+                    height: 120px; 
+                    padding: 15px; 
+                    background-color: $btn-white; 
+                    color: $btn-secondary; 
+                }
+
+                .card-overlay .overlay-content {
+                    opacity: 1; 
+                }
+                .card-overlay .overlay-content h4 {
+                    color: $btn-secondary; 
+                }
+                .card-overlay .overlay-content p {
+                    color: $btn-grey; 
+                }
+                .card-overlay .overlay-content .stats {
+                    color: $btn-secondary; 
+                }
+                .card-overlay .overlay-content .stats p {
+                    color: $btn-secondary; 
+                }
+                .card-overlay .overlay-content .stats img {
+                     filter: brightness(0); 
+                }
+
+                .add-button-container {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            .card-image {
+                background-color: transparent; 
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1; 
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .card-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 0; 
+                padding: 0 15px; 
+                background: transparent; 
+                color: transparent; 
+                transition: height 0.3s ease-out, padding 0.3s ease-out, background 0.3s ease-out, color 0.3s ease-out; 
+                z-index: 2; 
+
+                .overlay-content {
+                    opacity: 0; 
+                    transition: opacity 0.3s ease-out 0.1s; 
+                }
+
+                .overlay-content h4 {
+                    @include font(20px, 600, transparent);
+                    margin-bottom: 5px;
+                }
+
+                .overlay-content p {
+                    @include font(14px, 400, transparent);
+                    margin-bottom: 10px;
+                }
+
+                .overlay-content .stats {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 14px;
+                    color: transparent;
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                        filter: brightness(1); 
+                    }
+
+                    p {
+                        margin: 0;
+                        @include font(14px, 400, transparent);
+                        display: flex; 
+                        align-items: center; 
+                        gap: 5px; 
+                    }
+                }
+            }
+
+            .add-button-container {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                z-index: 3; 
+                opacity: 0; 
+                visibility: hidden; 
+                transition: opacity 0.3s ease 0.1s, visibility 0.3s ease 0.1s; 
+
+                .add-button {
+                    background-color: $btn-primary;
+                    color: $btn-white;
+                    border-radius: 50%;
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 24px;
+                    font-weight: 400;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                    transition: transform 0.2s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+

@@ -45,9 +45,10 @@ $red: #F20F10;
 .popular-section {
   width: 100%;
   min-height: 80vh; 
+  background-image: none;
   background-size: cover;
   background-position: center;
-  padding: 40px 0 60px 0px; 
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,49 +56,57 @@ $red: #F20F10;
 
 .popular-header {
   width: 90%;
-  max-width: 1920px; 
+  max-width: 1200px; 
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .popular-header__left {
-  margin-left: 133px;
-  margin-top: 55px;
+  margin-left: 0; 
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  position: relative;
+  padding-left: 20px; 
 
-}
-.popular-alo {
-    width: 150px;
+  .popular-alo {
+    width: 60px;
     height: auto;
+    position: absolute;
+    top: -20px;
+    left: 0; 
+  }
 }
 
 .popular-subtitle {
-  position: absolute;
-  left: 230px;
-  @include font(12px, 500, $blue);
+  position: static; 
+  @include font(14px, 500, $blue);
   letter-spacing: 1px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
+  padding-top: 20px; 
+  text-transform: uppercase;
 }
 
 .popular-title {
-  @include font(36px, 700, $darkblue);
+  @include font(38px, 700, $darkblue);
   margin-bottom: 0;
+  max-width: 500px;
+  text-align: left;
 }
 
 .popular-button {
-  margin-right: 122px;
-  margin-top: 40px;
-  @include button($blue, $white, 20px, 16px, 13px, 8px);
+  margin-right: 0;
+  margin-top: 0;
+  @include button($blue, $white, 25px, 12px, 14px, 5px);
 }
 
 .popular-slider-wrapper {
   width: 100%;
-  max-width: 1139px;
+  max-width: 1200px; 
   margin: 0 auto;
   padding: 10px 0;
   overflow: visible; 
@@ -105,51 +114,67 @@ $red: #F20F10;
 
 .popular-slider {
   .slick-slide {
-    padding: 0 12px;
+    padding: 0 15px;
     overflow: visible; 
   }
   .slick-arrow {
-    width: 60px;
-    height: 60px; 
+    width: 50px;
+    height: 50px; 
     border-radius: 50%;
     background: $white;
-    box-shadow: 0 2px 8px rgba(52,120,246,0.12);
+    box-shadow: 0 5px 15px rgba(52,120,246,0.15);
+    top: 50%; 
+    transform: translateY(-50%);
+    z-index: 10;
     
     &::before {
       color: $blue;
-      font-size: 24px;
+      font-size: 20px;
       line-height: 50px;
     }
     
     &.slick-prev {
-      left: -60px;
+      left: -25px;
     }
     
     &.slick-next {
-      right: -60px;
+      right: -25px;
     }
   }
   
   .slick-dots {
-    display: none !important;
+    display: block !important;
+    bottom: -40px;
+    li {
+      margin: 0 5px;
+      button {
+        &::before {
+          font-size: 10px;
+          color: rgba(0,0,0,0.2); 
+        }
+      }
+      &.slick-active button::before {
+        color: $blue; 
+      }
+    }
   }
 }
 
 .popular-card {
   background: $white;
   border-radius: 10px;
-  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 430px; 
+  min-height: 480px; 
   transition: box-shadow 0.2s, transform 0.2s;
   position: relative;
   will-change: transform; 
   
   &:hover {
-    box-shadow: 0 8px 32px 0 rgba(52,120,246,0.15);
-    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(52,120,246,0.2);
+    transform: translateY(-8px);
     z-index: 1; 
   }
 }
@@ -157,7 +182,7 @@ $red: #F20F10;
 .popular-card__img-wrap {
   position: relative;
   width: 100%;
-  height: 240px; 
+  height: 200px; 
   background: $white;
   display: flex;
   align-items: center;
@@ -168,73 +193,70 @@ $red: #F20F10;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
 }
 
 .popular-card__duration {
   position: absolute;
-  top: 23px;
-  left: 12px;
+  top: 15px;
+  left: 15px;
   background: $red;
-  @include font(9px, 600, $white);
+  @include font(10px, 600, $white);
   border-radius: 20px;
-  padding: 5px 22px;
-  letter-spacing: 1px;
+  padding: 6px 18px;
+  letter-spacing: 0.5px;
 }
 
 .popular-card__body {
-  padding: 15px 22px 0 22px;
+  padding: 20px 20px 10px 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   align-items: flex-start;
 }
 
 .popular-card__rating {
-
-  @include font(15px, 600, $blue);
-  margin-bottom: 2px;
+  @include font(16px, 600, $blue);
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+
+  span:first-child {
+    color: #FFD700; 
+  }
 }
 
 .popular-card__title {
-  @include font(15px, 600, $darkblue); // Reduced font size
+  @include font(18px, 600, $darkblue);
   margin: 0;
-  min-height: auto; // Remove fixed height
-  text-align: left; // Ensure left alignment
+  min-height: 50px; 
+  text-align: left;
   overflow: hidden;
   display: -webkit-box;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
 .popular-card__info {
-  @include font(9px, 400, $grey);
+  @include font(12px, 400, $grey);
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-left: -5px;
-  margin-bottom: 8px;
+  margin-left: 0;
+  margin-bottom: 10px;
 
   > div {
     display: flex;
-    gap: 4px; 
+    gap: 8px; 
+    align-items: center;
   }
 
-  .popular-card__file {
-    margin-top: 5px;
-    width: 20px;
-    height: 20px;
-  }
-
-
-  
   img {
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     object-fit: contain;
   }
 
@@ -245,45 +267,116 @@ $red: #F20F10;
   }
 }
 
-.popular-card__footer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 15px;
-  border-top: 1px solid $white;
-  background: $white;
-  width: 100%; 
-  margin-top: auto; 
-}
-
-.popular-card__ava {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: $white;
-}
-
-.popular-card__author {
-  margin-top: 5px;
-  @include font(16px, 500, $darkblue);
-}
-
-.popular-card__cost {
-  @include font(13px, 500, $red); 
-  margin-left: auto;
-  margin-top: 5px;
-  display: flex;
-  &.free {
-    color: $red;
-  }
-}
-
 .popular-card__line {
-  width: 90%; // Make line narrower
-  margin: 0 auto; // Center the line
+  width: 100%;
+  height: 1px;
+  background-color: #E0E0E0;
+  margin: 0 0px 15px 0px; 
+
   img {
     width: 100%;
     height: auto;
+    object-fit: contain;
   }
+}
+
+.popular-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 20px 20px;
+  width: 100%;
+
+  .popular-card__ava {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .popular-card__author {
+    @include font(14px, 500, $darkblue);
+    flex-grow: 1;
+  }
+
+  .popular-card__cost {
+    @include font(18px, 700, $blue);
+
+    &.free {
+      color: $red; 
+    }
+  }
+}
+
+.promo-banners-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 2;
+
+    .promo-banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        width: 50%;
+        min-height: 200px;
+        color: $white;
+
+        &.blue-banner {
+            background-color: $blue;
+        }
+
+        &.red-banner {
+            background-color: $red;
+        }
+
+        .promo-banner-content {
+            z-index: 1;
+            text-align: left;
+
+            .promo-icon {
+                width: 30px;
+                height: auto;
+                margin-bottom: 10px;
+                filter: brightness(0) invert(1); 
+            }
+
+            h6 {
+                @include font(14px, 500, $white);
+                margin-bottom: 5px;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                @include font(28px, 700, $white);
+                line-height: 1.2;
+                margin-bottom: 20px;
+                max-width: 250px;
+            }
+
+            .join-us-button {
+                @include button($white, $blue, 25px, 12px, 14px, 5px);
+            }
+        }
+
+        .banner-image {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 150%; 
+            width: auto;
+            opacity: 0.4;
+            transform: translateX(20%); 
+            z-index: 0;
+        }
+    }
 }

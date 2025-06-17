@@ -1,6 +1,6 @@
 $btn-white: #FFFFFF;
 $btn-secondary: #0F2239;
-$btn-primary: #3478F6;
+$btn-primary: #0D5EF4;
 $btn-grey: #4d5765;
 
 @mixin button($background-color, $text-color, $padding-x, $padding-y, $font-size,$border-radius) {
@@ -57,7 +57,7 @@ button, .my-button {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 50px 50px 50px 213px;
+  padding: 50px 50px 0px 213px;
   background-color: $btn-white;
   display: flex;
   flex-direction: column;

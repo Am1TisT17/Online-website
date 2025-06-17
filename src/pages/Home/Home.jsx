@@ -30,6 +30,9 @@ export default function Home() {
   return (
     <main>
       <div className="home-container">
+        <div className="background-shape-left"></div>
+        <div className="background-shape-right"></div>
+        <div className="decoration-dots"></div>
         <div className="home-35">
           <div className="home-35__content">
             <span className="hero__tag">LEARN FROM TODAY</span>
