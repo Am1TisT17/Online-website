@@ -1,4 +1,3 @@
-import Button from "../components/Button";
 import alo from '../../assets/img/alo.svg';
 import './AreYouReady.scss'
 

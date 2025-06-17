@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import './OurStudentsTestimonials.scss';
 import OurStudent from './OurStudents';
 import alo from '../../assets/img/alo.svg';
-import bg2 from '../../assets/img/OurStudentsTestimonials/bg (2).svg';
+import bg2 from '';
 import star1 from '../../assets/img/OurStudentsTestimonials/star1.svg';
 import star2 from '../../assets/img/OurStudentsTestimonials/star2.svg';
 import image4 from '../../assets/img/OurStudentsTestimonials/image (4).png';
