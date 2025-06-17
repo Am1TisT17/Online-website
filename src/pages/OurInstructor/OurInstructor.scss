@@ -72,6 +72,7 @@ $btn-grey: #4d5765;
     .header-section {
         flex: 1;
         max-width: 550px;
+        margin-left: 12px;
         width: 100%;
         text-align: left;
         padding: 20px;
@@ -126,7 +127,7 @@ $btn-grey: #4d5765;
         gap: 20px;
         max-width: 600px;
         padding: 0;
-        margin-right: 50px;
+        margin-right: 20px;
         margin-top: 20px;
         z-index: 1;
         animation: fade-in 0.8s ease-out forwards;

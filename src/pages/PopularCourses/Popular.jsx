@@ -6,8 +6,7 @@ import alo from '../../assets/img/alo.svg';
 import bg from '../../assets/img/courses/bg.svg';
 import "./Popular.scss";
 import courses from '../PopularCourses/courses.js';
-import image from '../../assets/img/OurStudentsTestimonials/image.svg';
-import image1 from '../../assets/img/OurStudentsTestimonials/image(1).svg';
+
 
 export default function Popular() {
     const settings = {
@@ -20,27 +19,7 @@ export default function Popular() {
     };
 
     return(
-        <section className="popular-section">
-            <div className="promo-banners-container">
-                <div className="promo-banner blue-banner">
-                    <div className="promo-banner-content">
-                        <img src={alo} alt="alo1" className="promo-icon"/>
-                        <h6>Popular Courses</h6>
-                        <h2>Get The Best Courses & Upgrade Your Skills</h2>
-                        <button className="join-us-button">JOIN WITH US →</button>
-                    </div>
-                    <img src={image} alt="person" className="banner-image"/>
-                </div>
-                <div className="promo-banner red-banner">
-                    <div className="promo-banner-content">
-                        <img src={alo} alt="alo1" className="promo-icon"/>
-                        <h6>Popular Courses</h6>
-                        <h2>Get The Best Courses & Upgrade Your Skills</h2>
-                        <button className="join-us-button">JOIN WITH US →</button>
-                    </div>
-                    <img src={image1} alt="person" className="banner-image"/>
-                </div>
-            </div>
+        <section className="popular-section" style={{ backgroundImage: `url(${bg})` }}>
             <div className="popular-header">
                 <div className="popular-header__left">
                     <img src={alo} alt="alo1" className="popular-alo" />

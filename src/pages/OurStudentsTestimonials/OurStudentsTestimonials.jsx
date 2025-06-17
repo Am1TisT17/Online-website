@@ -6,7 +6,6 @@ import './OurStudentsTestimonials.scss';
 import OurStudent from './OurStudents';
 import alo from '../../assets/img/alo.svg';
 import bg2 from '../../assets/img/OurStudentsTestimonials/bg (2).svg';
-import bg1 from '../../assets/img/OurStudentsTestimonials/bg (1).svg';
 import star1 from '../../assets/img/OurStudentsTestimonials/star1.svg';
 import star2 from '../../assets/img/OurStudentsTestimonials/star2.svg';
 import image4 from '../../assets/img/OurStudentsTestimonials/image (4).png';
@@ -21,7 +20,7 @@ export default function OurStudentsTestimonials() {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 800,
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
@@ -42,11 +41,11 @@ export default function OurStudentsTestimonials() {
         const stars = [];
         for (let i = 0; i < 5; i++) {
             if (i < Math.floor(rating)) {
-                stars.push(<img key={i} src={star1} alt="star" className="star" />);
+                stars.push(<img key={i} src={star2} alt="star" className="star filled" />);
             } else if (i === Math.floor(rating) && rating % 1 !== 0) {
-                stars.push(<img key={i} src={star2} alt="half-star" className="star" style={{ clipPath: `inset(0 ${100 - (rating % 1) * 100}% 0 0)` }} />);
+                stars.push(<img key={i} src={star2} alt="half-star" className="star half-filled" style={{ clipPath: `inset(0 ${100 - (rating % 1) * 100}% 0 0)` }} />);
             } else {
-                stars.push(<img key={i} src={star2} alt="empty-star" className="star" />);
+                stars.push(<img key={i} src={star1} alt="empty-star" className="star empty" />);
             }
         }
         return stars;
@@ -85,15 +84,16 @@ export default function OurStudentsTestimonials() {
                     {OurStudent.map((student, index) => (
                         <div key={index} className="testimonial-card">
                             <div className="avatar-container">
-                                <img src={bg1} alt="avatar-bg" className="avatar-bg"/>
                                 <img src={image4} alt="student-avatar" className="student-avatar"/>
                             </div>
-                            <p className="testimonial-text">"{student.title}"</p>
-                            <h4 className="student-name">{student.name}</h4>
-                            <p className="student-role">{student.who}</p>
-                            <div className="rating">
-                                {renderStars(student.rating)}
-                                <span className="rating-number">({student.rating})</span>
+                            <div className="text-content-wrapper">
+                                <p className="testimonial-text">"{student.title}"</p>
+                                <h4 className="student-name">{student.name}</h4>
+                                <p className="student-role">{student.who}</p>
+                                <div className="rating">
+                                    {renderStars(student.rating)}
+                                    <span className="rating-number">({student.rating})</span>
+                                </div>
                             </div>
                         </div>
                     ))}

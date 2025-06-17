@@ -15,10 +15,9 @@ $grey: #B2B2B2;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 178px;
+    padding: 100px 190px;
     background-color: $white;
-    min-height: 50vh;
-
+    min-height: 40vh;
     .text-content {
         flex: 1;
         max-width: 600px;
@@ -54,11 +53,11 @@ $grey: #B2B2B2;
 
     .brand-images {
         flex: 1;
-        max-width: 500px;
+        max-width: 550px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-right: 60px;
+        margin-right: 10px;
         .brand-img {
             width: 100%;
             height: auto;

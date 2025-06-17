@@ -48,7 +48,7 @@ $red: #F20F10;
   background-image: none;
   background-size: cover;
   background-position: center;
-  padding: 50px 0;
+  padding: 40px 0 60px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,38 +56,39 @@ $red: #F20F10;
 
 .popular-header {
   width: 90%;
-  max-width: 1200px; 
+  max-width: 1920px; 
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .popular-header__left {
-  margin-left: 0; 
-  margin-top: 0;
+  margin-left: 133; 
+  margin-top: 55;
   display: flex;
   flex-direction: column;
   gap: 8px;
   position: relative;
-  padding-left: 20px; 
+  padding-left: 130px; 
 
   .popular-alo {
-    width: 60px;
+    width: 150px;
     height: auto;
     position: absolute;
-    top: -20px;
-    left: 0; 
+    top: 23px;
+    left: 134px; 
   }
 }
 
 .popular-subtitle {
   position: static; 
-  @include font(14px, 500, $blue);
+  @include font(13px, 500, $blue);
   letter-spacing: 1px;
+  margin-left: 24px;
   margin-bottom: 5px;
-  padding-top: 20px; 
+  padding-top: 22px; 
   text-transform: uppercase;
 }
 
@@ -99,15 +100,15 @@ $red: #F20F10;
 }
 
 .popular-button {
-  margin-right: 0;
+  margin-right: 118px;
   margin-top: 0;
   @include button($blue, $white, 25px, 12px, 14px, 5px);
 }
 
 .popular-slider-wrapper {
   width: 100%;
-  max-width: 1200px; 
-  margin: 0 auto;
+  max-width: 1140px; 
+  margin-left: 15px;
   padding: 10px 0;
   overflow: visible; 
 }
@@ -134,11 +135,11 @@ $red: #F20F10;
     }
     
     &.slick-prev {
-      left: -25px;
+      left: -60px;
     }
     
     &.slick-next {
-      right: -25px;
+      right: -60px;
     }
   }
   
@@ -163,18 +164,18 @@ $red: #F20F10;
 .popular-card {
   background: $white;
   border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 16px rgba(0,0,0,0.05);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 480px; 
+  min-height: 430px; 
   transition: box-shadow 0.2s, transform 0.2s;
   position: relative;
   will-change: transform; 
   
   &:hover {
-    box-shadow: 0 10px 30px rgba(52,120,246,0.2);
-    transform: translateY(-8px);
+    box-shadow: 0 10px 32px rgba(52,120,246,0.2);
+    transform: translateY(-6px);
     z-index: 1; 
   }
 }
@@ -182,7 +183,7 @@ $red: #F20F10;
 .popular-card__img-wrap {
   position: relative;
   width: 100%;
-  height: 200px; 
+  height: 240px; 
   background: $white;
   display: flex;
   align-items: center;
@@ -193,31 +194,31 @@ $red: #F20F10;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: 0 0 0 0 ;
 }
 
 .popular-card__duration {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 23px;
+  left: 12px;
   background: $red;
-  @include font(10px, 600, $white);
+  @include font(9px, 600, $white);
   border-radius: 20px;
-  padding: 6px 18px;
+  padding: 5px 22px;
   letter-spacing: 0.5px;
 }
 
 .popular-card__body {
-  padding: 20px 20px 10px 20px;
+  padding: 15px 22px 0 22px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   align-items: flex-start;
 }
 
 .popular-card__rating {
-  @include font(16px, 600, $blue);
+  @include font(15px, 500, $blue);
   margin-bottom: 5px;
   display: flex;
   align-items: center;
@@ -229,24 +230,23 @@ $red: #F20F10;
 }
 
 .popular-card__title {
-  @include font(18px, 600, $darkblue);
+  @include font(15px, 600, $darkblue);
   margin: 0;
-  min-height: 50px; 
+  min-height: auto; 
   text-align: left;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
 .popular-card__info {
-  @include font(12px, 400, $grey);
+  @include font(9px, 400, $grey);
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-left: 0;
-  margin-bottom: 10px;
+  margin-left: -5px;
+  margin-bottom: 9px;
 
   > div {
     display: flex;
@@ -255,8 +255,8 @@ $red: #F20F10;
   }
 
   img {
-    width: 16px;
-    height: 16px;
+    width: 10px;
+    height: 10px;
     object-fit: contain;
   }
 
@@ -288,8 +288,8 @@ $red: #F20F10;
   width: 100%;
 
   .popular-card__ava {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 10px;
@@ -309,74 +309,3 @@ $red: #F20F10;
   }
 }
 
-.promo-banners-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 50px;
-    padding: 0 20px;
-    width: 100%;
-    max-width: 1200px;
-    z-index: 2;
-
-    .promo-banner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 30px;
-        border-radius: 10px;
-        overflow: hidden;
-        position: relative;
-        width: 50%;
-        min-height: 200px;
-        color: $white;
-
-        &.blue-banner {
-            background-color: $blue;
-        }
-
-        &.red-banner {
-            background-color: $red;
-        }
-
-        .promo-banner-content {
-            z-index: 1;
-            text-align: left;
-
-            .promo-icon {
-                width: 30px;
-                height: auto;
-                margin-bottom: 10px;
-                filter: brightness(0) invert(1); 
-            }
-
-            h6 {
-                @include font(14px, 500, $white);
-                margin-bottom: 5px;
-                text-transform: uppercase;
-            }
-
-            h2 {
-                @include font(28px, 700, $white);
-                line-height: 1.2;
-                margin-bottom: 20px;
-                max-width: 250px;
-            }
-
-            .join-us-button {
-                @include button($white, $blue, 25px, 12px, 14px, 5px);
-            }
-        }
-
-        .banner-image {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            height: 150%; 
-            width: auto;
-            opacity: 0.4;
-            transform: translateX(20%); 
-            z-index: 0;
-        }
-    }
-}
