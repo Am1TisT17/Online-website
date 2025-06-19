@@ -3,14 +3,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './OurStudentsTestimonials.scss';
-import OurStudent from './OurStudents';
+import OurStudent from './OurStudents.js';
 import alo from '../../assets/img/alo.svg';
-import bg2 from '';
 import star1 from '../../assets/img/OurStudentsTestimonials/star1.svg';
 import star2 from '../../assets/img/OurStudentsTestimonials/star2.svg';
 import image4 from '../../assets/img/OurStudentsTestimonials/image (4).png';
 import image from '../../assets/img/OurStudentsTestimonials/image.svg';
 import image1 from '../../assets/img/OurStudentsTestimonials/image(1).svg';
+import bg2 from '../../assets/img/OurStudentsTestimonials/bg (2).svg';
 
 
 export default function OurStudentsTestimonials() {

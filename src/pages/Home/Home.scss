@@ -62,14 +62,14 @@ button {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 0 90px; 
+  padding: 0 0 0 90px; 
   align-items: flex-start;
   width: 100%;
   max-width: $max-width;
   height: 100vh;
   background: url('/src/assets/img/home/slider.png') center center/contain no-repeat;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 
   .home-35 {
     .hero__tag{

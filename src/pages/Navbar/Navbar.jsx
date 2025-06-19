@@ -1,5 +1,6 @@
 import './Navbar.scss';
 import Logo from '../../assets/img/XMLID_7185_.png';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
@@ -11,11 +12,11 @@ export default function Navbar() {
         </div>
         
         <ul className="navbar__links">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#courses">COURSES</a></li>
-          <li><a href="#teachers">TEACHERS</a></li>
-          <li><a href="#about">ABOUT US</a></li>
-          <li><a href="#contacts">CONTACTS</a></li>
+          <li><Link to="/">HOME</Link></li>
+          <li><a href="#s">COURSES</a></li>
+          <li><a href="#">TEACHERS</a></li>
+          <li><Link to="/about">ABOUT US</Link></li>
+          <li><a href="#">CONTACTS</a></li>
           <li><a href="#contacts">RU</a></li>
         </ul>
         <button className="navbar__button">LOGIN/REGISTER</button>
