@@ -61,12 +61,10 @@ $grey: #4d5765;
         content: '';
         position: absolute;
         top: 350px;
-        left: 1420px;
-        width: 130px;
-        height: 130px;
+        left: 1410px;
+        width: 100px;
+        height: 175px;
         background: url('../../assets/img/why/shape.svg') no-repeat left top;
-        background-size: contain;
-        opacity: 0.7;
         pointer-events: none;
         z-index: 2;
     }

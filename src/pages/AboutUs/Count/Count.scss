@@ -1,0 +1,43 @@
+.count-section {
+  padding: 0;
+  background-color: #0D5EF4;
+  background-image: url('../../../assets/img/OurStudentsTestimonials/bg (1).svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Jost', sans-serif;
+}
+
+.count-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.count-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+  }
+}
+
+.divider {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
+}

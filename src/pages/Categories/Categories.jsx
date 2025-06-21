@@ -10,7 +10,7 @@ import icon3 from '../../assets/img/categories/icon(3).svg';
 import icon4 from '../../assets/img/categories/icon(4).svg';
 import cinema from '../../assets/img/categories/cinema.jpg';
 import que from '../../assets/img/Que.svg';
-import alo from '../../assets/img/alo.svg'
+import alo from '../../assets/img/alo.svg';
 import lines from "../../assets/img/categories/Lines.png";
 
 export default function Categories() {

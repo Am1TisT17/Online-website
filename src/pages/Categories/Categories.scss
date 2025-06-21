@@ -98,11 +98,9 @@ button, .my-button {
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
-  margin-left: 400px;
+  margin-left: 420px;
   margin-top: -90px;
-  gap: 20px;
-  width: 100%;
-
+  gap: 13px;
   .category-card {
     width: 160px;
     height: 168px;
@@ -195,7 +193,7 @@ button, .my-button {
     position: absolute;
     bottom: 257px;
     left: 155px;
-    z-index: 3;
+    z-index: 4;
     img {
       width: 284px;  
       height: auto;
@@ -220,7 +218,7 @@ button, .my-button {
     position: absolute;
     bottom: 268px;
     left: 145px;
-    z-index: 2;
+    z-index: 3;
     img {
       width: 284px; 
       height: auto;
@@ -290,7 +288,7 @@ button, .my-button {
 
 .about-section{
   position: absolute;
-  top: 1086px;
+  top: 1067px;
   right: 95px;
   width: 650px;
   height: 480px;

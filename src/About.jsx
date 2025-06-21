@@ -1,18 +1,21 @@
 import React from 'react'
 import Navbar from './pages/Navbar/Navbar.jsx'
-import HomeSection from './pages/Home/Home.jsx'
 import Footer from './pages/Footer/Footer.jsx'
-import AboutUs from './pages/AboutUs/AboutHome/AboutUs.jsx'
-import './style/style.scss'
-
-function About () {
+import AboutHome from './pages/AboutUs/AboutHome/AboutHome.jsx'
+import WhatWeDo from './pages/AboutUs/WhatWeDo/WhatWeDo.jsx'
+import AboutOurUni from './pages/AboutUs/AboutOurUni/AboutOurUni.jsx'
+import Count from './pages/AboutUs/Count/Count.jsx'
+function About() {
   return (
-    <div className="about">
+    <div className="home">
       <header>
         <Navbar />
       </header>
       <main>
-        <HomeSection />
+        <AboutHome />
+        <WhatWeDo />
+        <AboutOurUni />
+        <Count />
       </main>
       <footer>
         <Footer />
