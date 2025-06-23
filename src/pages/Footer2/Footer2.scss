@@ -14,27 +14,6 @@ $btn-grey: #4d5765;
   font-family: 'Inter', Arial, sans-serif;
   box-shadow: 0 4px 32px rgba(0,0,0,0.15);
   position: relative;
-  overflow: hidden;
-}
-
-.footer__decor {
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.footer__decor-1 {
-  top: 480px;
-  right: 70px;
-  width: 60px;
-  height: auto;
-}
-
-.footer__decor-2 {
-  bottom: 440px;
-  left: 50px;
-  width: 60px;
-  height: auto;
 }
 
 .footer__container {

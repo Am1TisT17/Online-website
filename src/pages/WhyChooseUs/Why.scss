@@ -1,45 +1,10 @@
+@import '../../style/mixin.scss';
+
+
 $white: #FFFFFF;
 $darkblue: #0F2239;
 $blue: #3478F6;
 $grey: #4d5765;
-
-@mixin button($background-color, $text-color, $padding-x, $padding-y, $font-size,$border-radius) {
-  display: inline-block;
-  padding: $padding-y $padding-x;
-  color: $text-color;
-  background-color: $background-color;
-  border: none;
-  border-radius: $border-radius;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
-  font-family: 'Jost', sans-serif;
-  font-size: $font-size;
-  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
-  font-weight: 400;
-  text-align: center;
-  outline: none;
-  box-shadow: none;
-  text-decoration: none;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    background-color: darken($background-color, 10%);
-  }
-
-  &:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-}
-
-@mixin font($font-size, $font-weight, $color) {
-  font-size: $font-size;
-  font-weight: $font-weight;
-  color: $color;
-  font-family: 'Jost', sans-serif;
-  line-height: 1.4;
-}
 
 
 .why-section {

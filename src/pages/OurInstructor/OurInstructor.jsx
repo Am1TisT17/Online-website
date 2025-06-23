@@ -27,30 +27,30 @@ export default function OurInstructor() {
             image: s3
         },
         {
-            name: "Hirmar Ubunti",
+            name: "Sarah Johnson",
             role: "Instructor",
-            courses: 2,
-            students: 25,
+            courses: 3,
+            students: 32,
             image: s3
         },
         {
-            name: "Hirmar Ubunti",
+            name: "Michael Chen",
             role: "Instructor",
-            courses: 2,
-            students: 25,
+            courses: 1,
+            students: 18,
             image: s3
         },
         {
-            name: "Hirmar Ubunti",
+            name: "Emily Davis",
             role: "Instructor",
-            courses: 2,
-            students: 25,
+            courses: 4,
+            students: 28,
             image: s3
         }
     ];
 
     return (
-        <section className="instructor-section">
+        <section className="instructor-sect">
             <img src={vector1} alt="vector" className="vector-1" />
             <img src={vector2} alt="vector" className="vector-2" />
             <img src={vector3} alt="vector" className="vector-3" />
@@ -82,12 +82,12 @@ export default function OurInstructor() {
                             <div className="overlay-content">
                                 <h4>{instructor.name}</h4>
                                 <p>{instructor.role}</p>
-                                    <div className="stats">
-                                        <img src={file} alt="file" />
-                                        <p>{instructor.courses} Courses</p>
-                                        <img src={people} alt="people" />
-                                        <p>{instructor.students} Students</p>
-                                    </div>
+                                <div className="stats">
+                                    <img src={file} alt="file" />
+                                    <p>{instructor.courses} Courses</p>
+                                    <img src={people} alt="people" />
+                                    <p>{instructor.students} Students</p>
+                                </div>
                             </div>
                         </div>
                         <div className="add-button-container">

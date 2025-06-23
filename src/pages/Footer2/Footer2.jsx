@@ -15,8 +15,6 @@ import Icondecor2 from '../../assets/img/Footer/Group.svg';
 export default function Footer() {
     return (
         <footer className="footer">
-            <img src={Icondecor1} alt="" className="footer__decor footer__decor-1" />
-            <img src={Icondecor2} alt="" className="footer__decor footer__decor-2" />
             <div className="footer__container">
                 <div className="footer__top">
                     <div className="footer__contact-block">

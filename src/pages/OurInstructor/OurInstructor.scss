@@ -1,52 +1,17 @@
+@import '../../style/mixin.scss';
+
+
 $btn-white: #FFFFFF;
 $btn-secondary: #0F2239;
 $btn-primary: #3478F6;
 $btn-grey: #4d5765;
-
-@mixin button($background-color, $text-color, $padding-x, $padding-y, $font-size,$border-radius) {
-  display: inline-block;
-  padding: $padding-y $padding-x;
-  color: $text-color;
-  background-color: $background-color;
-  border: none;
-  border-radius: $border-radius;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
-  font-family: 'Jost', sans-serif;
-  font-size: $font-size;
-  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
-  font-weight: 400;
-  text-align: center;
-  outline: none;
-  box-shadow: none;
-  text-decoration: none;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    background-color: darken($background-color, 10%);
-  }
-
-  &:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-}
-
-@mixin font($font-size, $font-weight, $color) {
-  font-size: $font-size;
-  font-weight: $font-weight;
-  color: $color;
-  font-family: 'Jost', sans-serif;
-  line-height: 1.4;
-}
 
 @keyframes fade-in {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-.instructor-section {
+.instructor-sect{
     display: flex;
     align-items: flex-start;
     padding: 190px 178px 0;
@@ -82,7 +47,7 @@ $btn-grey: #4d5765;
         .alo-img {
             position: absolute;
             top: 23px;
-            left: 20px; 
+            left: -8px; 
             width: 150px; 
             height: auto;
         }
@@ -91,7 +56,7 @@ $btn-grey: #4d5765;
             @include font(15px, 500, $btn-primary);
             margin-bottom: 10px;
             position: relative;
-            padding-left: 20px;
+            padding-left: 22px;
             text-transform: uppercase;
         }
 
@@ -144,6 +109,11 @@ $btn-grey: #4d5765;
             flex-direction: column;
             justify-content: flex-end; 
             height: 200px; 
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            }
 
             &.raised {
                 transform: translateY(-5px);

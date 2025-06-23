@@ -1,15 +1,9 @@
+@import '../../style/mixin.scss';
+
 $white: #FFFFFF;
 $darkblue: #0F2239;
 $blue: #0D5EF4;
 $grey: #B2B2B2;
-
-@mixin font($font-size, $font-weight, $color) {
-    font-size: $font-size;
-    font-weight: $font-weight;
-    color: $color;
-    font-family: 'Jost', sans-serif;
-    line-height: 1.4;
-  }
 
 .trusted-partners-section {
     display: flex;
@@ -23,12 +17,13 @@ $grey: #B2B2B2;
         max-width: 600px;
         text-align: left;
         padding: 20px;
+        margin-left: 0px;
         position: relative;
 
         .alo-img {
             position: absolute;
             top: 22px;
-            left: 21px;
+            left: -10px;
             width: 150px;
             height: auto;
         }
