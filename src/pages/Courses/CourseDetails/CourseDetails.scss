@@ -1,0 +1,266 @@
+@import '../../../style/mixin.scss';
+
+$white: #fff;
+$blue: #3478F6;
+$darkblue: #0F2239;
+$grey: #4D5765;
+$red: #F20F10;
+$border: #e0e0e0;
+$bg: #f8fafc;
+
+.course-details-page {
+  background: $bg;
+  min-height: 100vh;
+  padding: 90px 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.course-details-container {
+  display: flex;
+  gap: 32px;
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.course-details-left {
+  flex: 2;
+  background: $white;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(52,120,246,0.08);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.course-details-image-block {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .course-details-labels {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    display: flex;
+    gap: 12px;
+    .label {
+      @include font(12px, 600, $white);
+      background: $red;
+      border-radius: 20px;
+      padding: 6px 18px;
+      &.bestseller {
+        background: $blue;
+      }
+    }
+  }
+}
+
+.course-details-header {
+  .course-details-meta {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 8px;
+
+    .meta-item {
+      display: inline-flex;
+      align-items: flex-end;
+      gap: 8px;
+      @include font(13px, 400, $grey);
+    }
+
+    .icon-lessons,
+    .icon-students,
+    .icon-level {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      top: -4px;
+    }
+  }
+  
+  .course-details-title {
+    @include font(28px, 700, $darkblue);
+    margin: 0 0 12px 0;
+  }
+  .course-details-info-row {
+    display: flex;
+    gap: 40px;
+    @include font(14px, 500, $darkblue);
+    .meta-label {
+      display: flex;
+      flex-direction: column;
+      font-weight: 400;
+      color: $grey;
+    }
+  }
+}
+
+.course-details-tabs {
+  display: flex;
+  gap: 60px;
+  border-bottom: 2px solid $border;
+  margin: 24px 0 0 0;
+  .tab {
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: 600;
+    color: $blue;
+    background: none;
+    border: none;
+    @include font(1rem, 600, $blue);
+    &.active {
+      border-bottom: 3px solid $blue;
+      color: $darkblue;
+      background: none;
+    }
+  }
+}
+
+.course-details-content {
+  margin-top: 24px;
+  .course-details-description,
+  .course-details-learn,
+  .course-details-certification {
+    margin-bottom: 24px;
+    h2 {
+      @include font(1.2rem, 700, $darkblue);
+      margin-bottom: 10px;
+    }
+    p, ul {
+      @include font(1rem, 400, $grey);
+    }
+    ul {
+      list-style: disc inside;
+      padding-left: 20px;
+      li {
+        margin-bottom: 6px;
+        @include font(1rem, 400, $grey);
+      }
+    }
+  }
+}
+
+.course-details-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 200px;
+  max-width: 250px;
+  .course-details-price-block {
+    background: $white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(52,120,246,0.04);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    .add-to-cart{
+        @include button($blue,$white, 20px, 10px, 12px, 8px);
+    }
+    .buy-now{
+        @include button($white,$blue, 20px, 10px, 12px, 8px);
+        border: 1px solid $blue;
+    }
+    .course-details-video {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 18px;
+      .course-details-preview-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        background: $bg;
+        display: block;
+      }
+    }
+    .course-details-info-title {
+      @include font(20px, 700, $darkblue);
+      width: 100%;
+      text-align: left;
+      margin: 18px 0 6px 0;
+    }
+    .course-details-info-divider {
+      width: 100%;
+      height: 1px;
+      background: repeating-linear-gradient(90deg, $border, $border 6px, transparent 6px, transparent 12px);
+      margin-bottom: 10px;
+    }
+    .course-details-info-list {
+      margin: 0 0 18px 0;
+      width: 100%;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        @include font(13px, 500, $darkblue);
+        b {
+          color: $darkblue;
+          font-weight: 600;
+        }
+        img {
+          width: 15px;
+          height: 15px;
+          object-fit: contain;
+          margin-left: 12px;
+        }
+      }
+    }
+    .share-course {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      @include button($bg, $blue, 0, 10px, 1rem, 8px);
+      border: 1.5px solid $blue;
+      width: 100%;
+      margin-top: 8px;
+      img {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .course-details-container {
+    flex-direction: column;
+    gap: 24px;
+    max-width: 98vw;
+    padding: 0 8px;
+  }
+  .course-details-right {
+    max-width: 100vw;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .course-details-left {
+    padding: 12px;
+  }
+  .course-details-right {
+    padding: 0 2px;
+  }
+}

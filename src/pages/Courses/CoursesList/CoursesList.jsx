@@ -8,6 +8,8 @@ import pplIcon from '../../../assets/img/Courseslist/ppl.svg';
 import findIcon from '../../../assets/img/Courseslist/find.svg';
 import gridIcon from '../../../assets/img/Courseslist/grid.svg';
 import listIcon from '../../../assets/img/Courseslist/list.svg';
+import courseDetailsData from '../CourseDetails/CourseDetailsData';
+import { Link } from 'react-router-dom';
 
 const categories = ['Design', 'Development', 'Data Science', 'Photography'];
 const prices = ['Free', 'Paid'];
@@ -172,7 +174,9 @@ export default function CoursesList() {
                 <div className="course-card__footer">
                   <img src={course.ava} alt="ava" className="course-card__ava" />
                   <span className="course-card__author">{course.author}</span>
-                  <span className="course-card__view-details-link">View Details</span>
+                  <span className="course-card__view-details-link">
+                    <Link to={`/courses/${course.id}`}>View Details</Link>
+                  </span>
                 </div>
               </div>
             </div>
