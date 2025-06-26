@@ -12,6 +12,9 @@ $btn-grey: #4d5765;
 }
 
 .instructor-sect{
+    width: 1920px;
+    background-position: center;
+    align-items: center;
     display: flex;
     align-items: flex-start;
     padding: 190px 178px 0;
@@ -41,7 +44,6 @@ $btn-grey: #4d5765;
         width: 100%;
         text-align: left;
         padding: 20px;
-        position: relative;
         z-index: 1;
         
         .alo-img {

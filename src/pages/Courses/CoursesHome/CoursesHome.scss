@@ -1,0 +1,26 @@
+@mixin font ($font-size, $font-weight, $color)  {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    font-family: 'Jost', sans-serif;
+}
+
+.courses-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 55vh;
+    max-width: 1920px;
+    width: 100%;
+    margin: 40px auto -38px auto;
+    background: url('/src/assets/img/bg-image.svg') center center/contain no-repeat;
+    box-sizing: border-box;
+
+    .courses-text {
+        @include font(30px, 700, #ffffff);
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+    }
+}

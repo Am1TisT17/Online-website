@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './pages/Navbar/Navbar.jsx'
-import Footer from './pages/Footer/Footer.jsx'
+import Footer2 from './pages/Footer2/Footer2.jsx'
 import AboutHome from './pages/AboutUs/AboutHome/AboutHome.jsx'
 import WhatWeDo from './pages/AboutUs/WhatWeDo/WhatWeDo.jsx'
 import AboutOurUni from './pages/AboutUs/AboutOurUni/AboutOurUni.jsx'
@@ -23,7 +23,7 @@ function About() {
         <OurNews />
       </main>
       <footer>
-        <Footer />
+        <Footer2 />
       </footer>
     </div>
   )
