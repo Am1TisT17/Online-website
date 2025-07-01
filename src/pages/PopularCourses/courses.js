@@ -1,5 +1,6 @@
 const courses = [
     {
+      id: 1,
       img: '/src/assets/img/courses/image.png',
       title: "Education Software and PHP and JS System Script",
       duration: "03 WEEKS",
@@ -16,6 +17,7 @@ const courses = [
       cost: "$500",
     },
     {
+      id: 2,
       img: '/src/assets/img/courses/image.png',
       title: "Learn Figma — UI/UX Design Essential Training",
       duration: "03 WEEKS",
@@ -32,6 +34,7 @@ const courses = [
       cost: '$500',
     },
     {
+        id: 3,
         img: '/src/assets/img/courses/image.png',
         title: "Learn Figma — UI/UX Design Essential Training",
         duration: "03 WEEKS",
@@ -48,6 +51,7 @@ const courses = [
         cost: '$500',
       },
       {
+        id: 4,
         img: '/src/assets/img/courses/image.png',
         title: "Advanced Android 12 & Kotlin Development Course",
         duration: "03 WEEKS",
@@ -64,6 +68,7 @@ const courses = [
         cost: '$100',
       },
       {
+        id: 5,
         img: '/src/assets/img/courses/image.png',
         title: "IT Statistics Data Science and Business Analysis",
         duration: "03 WEEKS",

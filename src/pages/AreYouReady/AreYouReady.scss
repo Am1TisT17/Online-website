@@ -1,3 +1,5 @@
+@import '../../style/mixin.scss';
+
 $white: #FFFFFF;
 $darkblue: #0F2239;
 $blue: #0D5EF4;
@@ -123,7 +125,7 @@ $red: #F20F10;
     text-transform: uppercase;
   }
   .offer-title {
-    @include font(35px , 700px, $white);
+    @include font(35px, 700, $white);
     margin-bottom: 0px;
     span {
       color: $red;
@@ -135,7 +137,7 @@ $red: #F20F10;
     margin-bottom: 12px;
   }
   .offer-description {
-    @include font (13px, 400, #D0DBE9);
+    @include font(13px, 400, #D0DBE9);
     max-width: 70%;
     margin-left: 110px;
     margin-bottom: 32px;

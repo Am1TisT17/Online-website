@@ -1,11 +1,16 @@
+@import '../../../style/mixin.scss';
+
+$white: #FFFFFF;
+$blue: #0D5EF4;
+
 .count-section {
   padding: 0;
-  background-color: #0D5EF4;
+  background-color: $blue;
   background-image: url('../../../assets/img/OurStudentsTestimonials/bg (1).svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
+  color: $white;
   font-family: 'Jost', sans-serif;
 }
 
@@ -25,14 +30,12 @@
   padding: 40px;
 
   h2 {
-    font-size: 40px;
-    font-weight: 700;
+    @include font(40px, 700, $white);
     margin: 0 0 10px 0;
   }
 
   p {
-    font-size: 16px;
-    font-weight: 400;
+    @include font(16px, 400, $white);
     opacity: 0.9;
   }
 }

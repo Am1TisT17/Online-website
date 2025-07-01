@@ -1,11 +1,15 @@
+@import '../../style/mixin.scss';
+
 $color: #0F2239;
+$white: #FFFFFF;
+$blue: #3478F6;
 
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: #ffffff;
+  background: $white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 
@@ -29,10 +33,7 @@ $color: #0F2239;
     }
 
     h2 {
-      font-family: 'Jost', sans-serif;
-      font-size: 24px;
-      font-weight: 700;
-      color: #0F2239;
+      @include font(24px, 700, $color);
     }
   }
 
@@ -44,34 +45,18 @@ $color: #0F2239;
     padding: 0;
 
     li a {
-      font-family: 'Jost', sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-      color: #0F2239;
+      @include font(16px, 500, $color);
       text-decoration: none;
       transition: color 0.3s ease;
 
       &:hover {
-        color: #3478F6;
+        color: $blue;
       }
     }
   }
 
   &__button {
-    padding: 12px 24px;
-    background: #3478F6;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-family: 'Jost', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background: #2461d7;
-    }
+    @include button($blue, $white, 24px, 12px, 16px, 8px);
   }
 }
 

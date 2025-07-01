@@ -6,6 +6,7 @@ import alo from '../../assets/img/alo.svg';
 import bg from '../../assets/img/courses/bg.svg';
 import "./Popular.scss";
 import courses from '../PopularCourses/courses.js';
+import { Link } from 'react-router-dom';
 
 
 export default function Popular() {
@@ -31,7 +32,7 @@ export default function Popular() {
             <div className="popular-slider-wrapper">
                 <Slider {...settings} className="popular-slider">
                     {courses.map((d, i) => (
-                        <div className="popular-card" key={i}>
+                        <Link to={`/courses/${i+1}`} className="popular-card" key={i} style={{ textDecoration: 'none', color: 'inherit' }}>
                             <div className="popular-card__img-wrap">
                                 <img src={d.img} alt="course" className="popular-card__img" />
                                 <span className="popular-card__duration">{d.duration}</span>
@@ -65,7 +66,7 @@ export default function Popular() {
                                 <span className="popular-card__author">{d.author}</span>
                                 <span className={`popular-card__cost${d.cost === 'FREE' ? ' free' : ''}`}>{d.cost}</span>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </Slider>
             </div>

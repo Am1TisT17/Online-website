@@ -1,0 +1,147 @@
+@import '../../../style/mixin.scss';
+
+$white: #FFFFFF;
+$darkblue: #0F2239;
+$blue: #3478F6;
+$grey: #4D5765;
+$lightgrey: #f7fafd;
+
+.bio-outer {
+  background: #f9f9fb;
+  min-height: 80vh;
+  padding: 40px 210px;
+  display: flex;
+  justify-content: center;
+}
+.bio-main {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: flex-start;
+}
+.bio-left {
+  flex: 2;
+  min-width: 0;
+}
+.bio-right {
+  flex: 1;
+  min-width: 320px;
+  max-width: 370px;
+}
+
+.bio-section {
+  margin-bottom: 32px;
+}
+.bio-section h3 {
+  @include font(1.35rem, 700, $darkblue);
+  margin-bottom: 12px;
+}
+.bio-text {
+  @include font(1.05rem, 400, $grey);
+  margin-bottom: 18px;
+}
+.bio-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 8px;
+}
+.bio-stat-card {
+  background: $lightgrey;
+  border-radius: 10px;
+  padding: 18px 28px;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 2px 8px 0 rgba(52,120,246,0.04);
+}
+.stat-value {
+  @include font(1.5rem, 700, $blue);
+}
+.stat-label {
+  @include font(1rem, 400, $grey);
+  margin-top: 4px;
+}
+
+.edu-section {
+  margin-bottom: 32px;
+}
+.edu-section h3 {
+  @include font(1.18rem, 700, $darkblue);
+  margin-bottom: 8px;
+}
+.edu-text {
+  @include font(1.05rem, 400, $grey);
+  margin-bottom: 12px;
+}
+.edu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.edu-list li {
+  @include font(1rem, 400, #222);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quick-contact-block {
+  background: $white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px 0 rgba(52,120,246,0.08);
+  padding: 32px 28px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.quick-contact-title {
+  @include font(1.35rem, 700, $darkblue);
+  margin-bottom: 6px;
+  text-align: left;
+}
+.quick-contact-sub {
+  @include font(0.98rem, 400, $grey);
+  margin-bottom: 18px;
+  text-align: center;
+}
+.quick-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.quick-contact-form input,
+.quick-contact-form textarea {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 10px 12px;
+  @include font(1rem, 400, $darkblue);
+  background: $lightgrey;
+  resize: none;
+  outline: none;
+  transition: border 0.2s;
+}
+.quick-contact-form input:focus,
+.quick-contact-form textarea:focus {
+  border: 1.5px solid $blue;
+}
+.quick-contact-form textarea {
+  min-height: 70px;
+  max-height: 120px;
+}
+.quick-contact-form button {
+  @include button($blue, $white, 0, 12px, 1rem, 6px);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+@media (max-width: 1000px) {
+  .bio-main {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .bio-right {
+    max-width: 100%;
+    min-width: 0;
+  }
+}

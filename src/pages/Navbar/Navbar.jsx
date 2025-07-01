@@ -14,7 +14,7 @@ export default function Navbar() {
         <ul className="navbar__links">
           <li><Link to="/">HOME</Link></li>
           <li><Link to="/courses">COURSES</Link></li>
-          <li><a href="#">TEACHERS</a></li>
+          <li><a href="/instructor">TEACHERS</a></li>
           <li><Link to="/about">ABOUT US</Link></li>
           <li><a href="/contact">CONTACTS</a></li>
           <li><a href="#contacts">RU</a></li>

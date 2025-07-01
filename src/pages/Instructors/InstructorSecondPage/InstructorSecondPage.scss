@@ -1,0 +1,132 @@
+@import '../../../style/mixin.scss';
+
+$white: #ffffff;
+$blue: #3478F6;
+$darkblue: #0F2239;
+$grey: #4D5765;
+$red: #F20F10;
+$border: #e0e0e0;
+$bg: #f6f9fc;
+
+.instructor2-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $bg;
+  padding: 60px 190px;
+  min-height: 500px;
+}
+
+.instructor2-left {
+  flex: 1;
+  padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.instructor2-label {
+  @include font(1rem, 500, $blue);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.instructor2-title {
+  @include font(2.2rem, 700, $darkblue);
+  margin-bottom: 24px;
+}
+.instructor2-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+  margin-bottom: 32px;
+}
+.feature-card {
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px 0 rgba($blue, 0.08);
+  padding: 16px 24px;
+  @include font(1.05rem, 500, $darkblue);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pin {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.instructor2-btn {
+  @include button($blue, $white, 32px, 12px, 1.1rem, 8px);
+  width: fit-content;
+  margin-top: 8px;
+}
+
+.instructor2-right {
+  flex: 1;
+  min-width: 300px;
+  min-height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shape-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.7;
+}
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+}
+.circle.blue {
+  width: 20px;
+  height: 20px;
+  left: 20px;
+  top: 120px;
+  background: $blue;
+}
+.circle.red {
+  width: 32px;
+  height: 32px;
+  right: 60px;
+  top: 120px;
+  background: $red;
+}
+.circle.grey {
+  width: 18px;
+  height: 18px;
+  left: 80px;
+  bottom: 40px;
+  background: $grey;
+  opacity: 0.2;
+}
+.circle.light {
+  width: 32px;
+  height: 32px;
+  right: 40px;
+  top: 40px;
+  background: lighten($blue, 40%);
+  opacity: 0.3;
+}
+
+@media (max-width: 900px) {
+  .instructor2-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 0;
+  }
+  .instructor2-left, .instructor2-right {
+    padding-left: 0;
+    min-width: unset;
+    width: 100%;
+  }
+  .instructor2-right {
+    min-height: 300px;
+    margin-top: 32px;
+  }
+}

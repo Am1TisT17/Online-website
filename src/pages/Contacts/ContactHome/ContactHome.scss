@@ -1,9 +1,4 @@
-@mixin font ($font-size, $font-weight, $color)  {
-    font-size: $font-size;
-    font-weight: $font-weight;
-    color: $color;
-    font-family: 'Jost', sans-serif;
-}
+@import '../../../style/mixin.scss';
 
 .contact-container {
     display: flex;

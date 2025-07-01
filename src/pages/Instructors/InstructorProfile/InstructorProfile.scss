@@ -1,0 +1,199 @@
+@import '../../../style/mixin.scss';
+
+$white: #fff;
+$blue: #3478F6;
+$darkblue: #0F2239;
+$grey: #4D5765;
+$red: #F20F10;
+$border: #e0e0e0;
+$bg: #ffffff;
+
+.instructor-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f9f9fb;
+  padding: 150px 0;
+}
+
+.profile-card {
+  display: flex;
+  background: $white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(52, 120, 246, 0.08);
+  padding: 32px 32px 24px 32px;
+  gap: 32px;
+  width: 1100px;
+}
+
+.profile-img-wrap {
+  max-width: 540px;
+  max-height: 460px;
+  background: #aab3be66;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #b0b7c3;
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.profile-name {
+  @include font(30px, 700, $darkblue);
+  margin-bottom: 0;
+}
+.profile-cert {
+  @include font(13px, 400, $blue);
+  margin-bottom: -10px;
+}
+.profile-p{
+  @include font(12px, 400, $grey);
+  max-width: 95%;
+}
+.profile-about {
+  @include font(15px, 400, $grey);
+  margin-bottom: 12px;
+}
+.profile-meta {
+  display: flex;
+  gap: 32px;
+  @include font(10px, 400, $grey);
+  margin-bottom: 12px;
+}
+.profile-rating {
+  @include font(1rem, 600, #F7B801);
+}
+.profile-social {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.profile-social a {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f2f6fa;
+  @include font(1.2rem, 400, $blue);
+  transition: background 0.2s;
+}
+.profile-social a:hover {
+  background: $blue;
+  color: $white;
+}
+.icon-facebook::before {
+  content: "f";
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+.icon-twitter::before {
+  content: "t";
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+.icon-linkedin::before {
+  content: "in";
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+.profile-contact {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.profile-contact-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 180px;
+}
+
+.profile-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $blue;
+}
+
+.profile-contact-icon img {
+  width: 22px;
+  height: 22px;
+  display: block;
+  z-index: 1;
+}
+
+.profile-contact-label {
+  @include font(12px, 500, $grey);
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.profile-contact-value {
+  @include font(15px, 700, $darkblue);
+}
+
+.profile-contact-divider {
+  width: 100%;
+  height: 1px;
+  background: #e0e0e0;
+  opacity: 0.6  ;
+  margin: 16px 0 -10px 0;
+  border: none;
+}
+
+.back-btn {
+  margin-top: 16px;
+  @include button($blue, $white, 24px, 8px, 1rem, 6px);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 1100px) {
+  .profile-card {
+    flex-direction: column;
+    min-width: 340px;
+    max-width: 98vw;
+    gap: 20px;
+    align-items: center;
+  }
+  .profile-img-wrap {
+    min-width: 240px;
+    min-height: 180px;
+  }
+  .profile-img {
+    width: 220px;
+    height: 160px;
+  }
+} 

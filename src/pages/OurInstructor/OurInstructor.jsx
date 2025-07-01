@@ -58,7 +58,7 @@ export default function OurInstructor() {
             <img src={vector5} alt="vector" className="vector-5" />
             <img src={vector6} alt="vector" className="vector-6" />
             <div className="header-section">
-                <img src={alo} alt="alo1" className="alo-img"/>
+                <img src={alo} alt="alo1" className="ins-alo-img"/>
                 <h6>Our Instructor</h6>
                 <h2>Meet Our Expert Instructor</h2>
                 <p>Graduates of XYZ University have achieved remarkable success in their chosen fields, with many going on to pursue advanced degrees, secure fulfilling careers, and make valuable contributions to their communities.</p>
