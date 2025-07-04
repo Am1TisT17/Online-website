@@ -19,7 +19,7 @@ export default function Navbar() {
           <li><a href="/contact">CONTACTS</a></li>
           <li><a href="#contacts">RU</a></li>
         </ul>
-        <button className="navbar__button">LOGIN/REGISTER</button>
+        <Link to="/login" className="navbar__button">LOGIN/REGISTER</Link>
       </div>
     </nav>
   );

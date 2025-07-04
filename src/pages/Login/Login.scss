@@ -1,0 +1,91 @@
+@import '../../style/mixin.scss';
+
+$white: #FFFFFF;
+$darkblue: #0F2239;
+$blue: #3478F6;
+$grey: #4d5765;
+
+.login-page {
+  min-height: 100vh;
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  background: $white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(52, 120, 246, 0.10);
+  padding: 40px 32px 32px 32px;
+  min-width: 340px;
+  max-width: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.login-title {
+  @include font(22px, 700, $darkblue);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  label {
+    @include font(14px, 600, $darkblue);
+    margin-bottom: 4px;
+  }
+
+  input {
+    padding: 10px 14px;
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    font-size: 15px;
+    color: $darkblue;
+    background: #f7faff;
+    transition: border 0.2s;
+    &:focus {
+      border: 1.5px solid $blue;
+      outline: none;
+    }
+  }
+
+  .login-btn {
+    @include button($blue, $white, 18px, 10px, 16px, 8px);
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    &:hover {
+      background: darken($blue, 7%);
+    }
+  }
+}
+
+.forgot-link {
+  display: block;
+  margin: 18px auto 0 auto;
+  text-align: center;
+  color: $grey;
+  font-size: 14px;
+  text-decoration: underline;
+  transition: color 0.2s;
+  &:hover {
+    color: $blue;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-card {
+    min-width: 90vw;
+    padding: 24px 8vw 24px 8vw;
+  }
+} 

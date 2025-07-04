@@ -6,6 +6,7 @@ import CoursesPage from './Courses.jsx'
 import InstructorPage from './pages/Instructors/InstructorPage/InstructorPage.jsx'
 import CourseDetails from './pages/Courses/CourseDetails/CourseDetails'
 import InstructorProfile from './pages/Instructors/InstructorProfile/InstructorProfile.jsx'
+import Login from './pages/Login/Login.jsx'
 import { Routes, Route } from 'react-router-dom'
 import './style/style.scss'
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/courses/:id" element={<CourseDetails />} />
       <Route path="/instructor" element={<InstructorPage   />} />
       <Route path="/instructors/:id" element={<InstructorProfile />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   )
 }
